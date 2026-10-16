@@ -1,3 +1,4 @@
+import React from 'react';
 import { Incident } from '../types/models';
 import { Card } from './Card';
 
@@ -5,7 +6,7 @@ interface IncidentQueueProps {
     incidents: Incident[];
 }
 
-export function IncidentQueue({ incidents }: IncidentQueueProps) {
+export const IncidentQueue = React.memo(function IncidentQueue({ incidents }: IncidentQueueProps) {
     // Sort logically: Waiting first (P3 then P2 then P1), then Assigned, then Completed (reverse chrono)
     const sorted = [...incidents].sort((a, b) => {
         const order = { 'WAITING': 0, 'ASSIGNED': 1, 'COMPLETED': 2 };
@@ -75,4 +76,4 @@ export function IncidentQueue({ incidents }: IncidentQueueProps) {
             </div>
         </Card>
     );
-}
+});

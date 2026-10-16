@@ -4,3 +4,4 @@ pydantic
 numpy
 pytest
 pytest-asyncio
+httpx

@@ -13,7 +13,7 @@ export function TimelineControls({ currentMinute, maxMinute, onChange, disabled 
     const [speed, setSpeed] = useState<number>(1); // Speed multiplier
 
     useEffect(() => {
-        let interval: any;
+        let interval: ReturnType<typeof setInterval> | undefined;
         if (isPlaying && !disabled) {
             const delay = 300 / speed;
             interval = setInterval(() => {

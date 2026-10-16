@@ -1,5 +1,5 @@
 # Stage 1: Build the frontend
-FROM node:20.12.2-alpine as frontend-builder
+FROM node:20.12.2-alpine AS frontend-builder
 
 WORKDIR /app/frontend
 
@@ -23,6 +23,10 @@ COPY backend/ ./
 
 # Copy built frontend static files
 COPY --from=frontend-builder /app/frontend/dist /app/frontend/dist
+
+# Run as non-root user for security
+RUN useradd -m appuser && chown -R appuser /app
+USER appuser
 
 # Expose the API and UI port
 EXPOSE 8000

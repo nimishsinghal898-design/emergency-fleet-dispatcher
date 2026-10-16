@@ -50,8 +50,8 @@ function App() {
             // 3. Reset timeline
             setCurrentMinute(0);
             updateTimelineState(0, result);
-        } catch (err: any) {
-            setError(err.message || 'Failed to connect to simulation service');
+        } catch (err: unknown) {
+            setError(err instanceof Error ? err.message : 'Failed to connect to simulation service');
         } finally {
             setIsLoading(false);
         }
@@ -75,8 +75,8 @@ function App() {
             
             setCurrentMinute(0);
             updateTimelineState(0, covData);
-        } catch (err: any) {
-            setError(err.message || 'Failed to connect to simulation service');
+        } catch (err: unknown) {
+            setError(err instanceof Error ? err.message : 'Failed to connect to simulation service');
         } finally {
             setIsLoading(false);
         }
@@ -113,7 +113,7 @@ function App() {
         // Start from initial state (which we don't strictly have recorded, but we can reconstruct it from the first assignment)
         // Actually, the API returns the final vehicle states. To perfectly reconstruct, we play the assignments forward.
         // For simplicity and speed, we will approximate positions based on assignments.
-        const vehiclesCopy = [...data.vehicles].map(v => ({...v, status: 'IDLE' as any, current_incident_id: null, completion_time: null}));
+        const vehiclesCopy: Vehicle[] = data.vehicles.map(v => ({...v, status: 'IDLE', current_incident_id: null, completion_time: null}));
         
         const pastAssignments = data.assignments.filter(a => a.dispatch_time <= t);
         
@@ -124,8 +124,8 @@ function App() {
                 vehiclesCopy[vIndex].y = a.incident_y;
                 if (a.completion_time > t) {
                     vehiclesCopy[vIndex].status = 'BUSY';
-                    vehiclesCopy[vIndex].current_incident_id = a.incident_id as any;
-                    vehiclesCopy[vIndex].completion_time = a.completion_time as any;
+                    vehiclesCopy[vIndex].current_incident_id = a.incident_id;
+                    vehiclesCopy[vIndex].completion_time = a.completion_time;
                 }
             }
         }

@@ -1,0 +1,4062 @@
+{
+  "seed": 20260911,
+  "scenario_summary": {
+    "total_vehicles": 20,
+    "total_incidents": 100,
+    "priority_1_count": 65,
+    "priority_2_count": 23,
+    "priority_3_count": 12
+  },
+  "assignments": [
+    {
+      "assignment_id": "A0001",
+      "incident_id": "I054",
+      "vehicle_id": "V13",
+      "priority": 2,
+      "dispatch_time": 0,
+      "vehicle_x_before": 96.55487783573645,
+      "vehicle_y_before": 17.253623673528086,
+      "incident_x": 92.64303765483909,
+      "incident_y": 21.72143845536112,
+      "distance": 5.9383383640248075,
+      "response_time": 5.9383383640248075,
+      "arrival_time": 5.9383383640248075,
+      "completion_time": 13.938338364024808,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 5,
+        "UPPER_LEFT": 5,
+        "LOWER_RIGHT": 5,
+        "UPPER_RIGHT": 5
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 5,
+        "UPPER_LEFT": 5,
+        "LOWER_RIGHT": 4,
+        "UPPER_RIGHT": 5
+      }
+    },
+    {
+      "assignment_id": "A0002",
+      "incident_id": "I030",
+      "vehicle_id": "V20",
+      "priority": 1,
+      "dispatch_time": 0,
+      "vehicle_x_before": 96.7225189649379,
+      "vehicle_y_before": 70.37532141728971,
+      "incident_x": 89.7252227330544,
+      "incident_y": 57.06963846252741,
+      "distance": 15.033407912026577,
+      "response_time": 15.033407912026577,
+      "arrival_time": 15.033407912026577,
+      "completion_time": 23.033407912026576,
+      "vehicle_quadrant_before": "UPPER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 5,
+        "UPPER_LEFT": 5,
+        "LOWER_RIGHT": 4,
+        "UPPER_RIGHT": 5
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 5,
+        "UPPER_LEFT": 5,
+        "LOWER_RIGHT": 4,
+        "UPPER_RIGHT": 4
+      }
+    },
+    {
+      "assignment_id": "A0003",
+      "incident_id": "I002",
+      "vehicle_id": "V07",
+      "priority": 2,
+      "dispatch_time": 1,
+      "vehicle_x_before": 23.07447947398914,
+      "vehicle_y_before": 73.49166101972604,
+      "incident_x": 15.43462526047621,
+      "incident_y": 68.44818906712905,
+      "distance": 9.154451471298744,
+      "response_time": 9.154451471298744,
+      "arrival_time": 10.154451471298744,
+      "completion_time": 18.154451471298742,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 5,
+        "UPPER_LEFT": 5,
+        "LOWER_RIGHT": 4,
+        "UPPER_RIGHT": 4
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 5,
+        "UPPER_LEFT": 4,
+        "LOWER_RIGHT": 4,
+        "UPPER_RIGHT": 4
+      }
+    },
+    {
+      "assignment_id": "A0004",
+      "incident_id": "I051",
+      "vehicle_id": "V10",
+      "priority": 2,
+      "dispatch_time": 2,
+      "vehicle_x_before": 0.10173509482337417,
+      "vehicle_y_before": 63.72273258273574,
+      "incident_x": 15.479080155049708,
+      "incident_y": 54.863980737850795,
+      "distance": 17.7465553094261,
+      "response_time": 17.7465553094261,
+      "arrival_time": 19.7465553094261,
+      "completion_time": 27.7465553094261,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 5,
+        "UPPER_LEFT": 4,
+        "LOWER_RIGHT": 4,
+        "UPPER_RIGHT": 4
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 5,
+        "UPPER_LEFT": 3,
+        "LOWER_RIGHT": 4,
+        "UPPER_RIGHT": 4
+      }
+    },
+    {
+      "assignment_id": "A0005",
+      "incident_id": "I070",
+      "vehicle_id": "V08",
+      "priority": 2,
+      "dispatch_time": 2,
+      "vehicle_x_before": 43.47050531749778,
+      "vehicle_y_before": 67.80029846673176,
+      "incident_x": 26.440451511712904,
+      "incident_y": 64.54877162853995,
+      "distance": 17.33768033525274,
+      "response_time": 17.33768033525274,
+      "arrival_time": 19.33768033525274,
+      "completion_time": 27.33768033525274,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 5,
+        "UPPER_LEFT": 3,
+        "LOWER_RIGHT": 4,
+        "UPPER_RIGHT": 4
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 5,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 4,
+        "UPPER_RIGHT": 4
+      }
+    },
+    {
+      "assignment_id": "A0006",
+      "incident_id": "I078",
+      "vehicle_id": "V05",
+      "priority": 1,
+      "dispatch_time": 2,
+      "vehicle_x_before": 15.21676721457254,
+      "vehicle_y_before": 3.084488400980556,
+      "incident_x": 4.853782685736596,
+      "incident_y": 5.089592122002928,
+      "distance": 10.555183052744795,
+      "response_time": 10.555183052744795,
+      "arrival_time": 12.555183052744795,
+      "completion_time": 20.555183052744795,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 5,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 4,
+        "UPPER_RIGHT": 4
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 4,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 4,
+        "UPPER_RIGHT": 4
+      }
+    },
+    {
+      "assignment_id": "A0007",
+      "incident_id": "I016",
+      "vehicle_id": "V15",
+      "priority": 3,
+      "dispatch_time": 3,
+      "vehicle_x_before": 66.51022109246729,
+      "vehicle_y_before": 43.513042571602426,
+      "incident_x": 74.29712219543717,
+      "incident_y": 41.296248934609814,
+      "distance": 8.09629562308865,
+      "response_time": 8.09629562308865,
+      "arrival_time": 11.09629562308865,
+      "completion_time": 19.09629562308865,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 4,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 4,
+        "UPPER_RIGHT": 4
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 4,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 3,
+        "UPPER_RIGHT": 4
+      }
+    },
+    {
+      "assignment_id": "A0008",
+      "incident_id": "I014",
+      "vehicle_id": "V11",
+      "priority": 1,
+      "dispatch_time": 3,
+      "vehicle_x_before": 94.49380928107928,
+      "vehicle_y_before": 39.75557747389642,
+      "incident_x": 96.49350096977827,
+      "incident_y": 19.238552624845727,
+      "distance": 20.61424448061135,
+      "response_time": 20.61424448061135,
+      "arrival_time": 23.61424448061135,
+      "completion_time": 31.61424448061135,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 4,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 3,
+        "UPPER_RIGHT": 4
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 4,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 2,
+        "UPPER_RIGHT": 4
+      }
+    },
+    {
+      "assignment_id": "A0009",
+      "incident_id": "I025",
+      "vehicle_id": "V02",
+      "priority": 1,
+      "dispatch_time": 3,
+      "vehicle_x_before": 28.123870633481733,
+      "vehicle_y_before": 40.40453718438553,
+      "incident_x": 9.29933957253468,
+      "incident_y": 27.90840778561794,
+      "distance": 22.594605984953667,
+      "response_time": 22.594605984953667,
+      "arrival_time": 25.594605984953667,
+      "completion_time": 33.59460598495367,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 4,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 2,
+        "UPPER_RIGHT": 4
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 3,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 2,
+        "UPPER_RIGHT": 4
+      }
+    },
+    {
+      "assignment_id": "A0010",
+      "incident_id": "I035",
+      "vehicle_id": "V12",
+      "priority": 1,
+      "dispatch_time": 3,
+      "vehicle_x_before": 59.021556750511536,
+      "vehicle_y_before": 15.498199274935615,
+      "incident_x": 56.557418570074624,
+      "incident_y": 17.252688548626793,
+      "distance": 3.0249313353833887,
+      "response_time": 3.0249313353833887,
+      "arrival_time": 6.024931335383389,
+      "completion_time": 14.024931335383389,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 3,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 2,
+        "UPPER_RIGHT": 4
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 3,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 4
+      }
+    },
+    {
+      "assignment_id": "A0011",
+      "incident_id": "I022",
+      "vehicle_id": "V19",
+      "priority": 1,
+      "dispatch_time": 4,
+      "vehicle_x_before": 73.88803256355993,
+      "vehicle_y_before": 54.42942308499752,
+      "incident_x": 72.54173898200555,
+      "incident_y": 60.96057189732197,
+      "distance": 6.668463932305672,
+      "response_time": 6.668463932305672,
+      "arrival_time": 10.668463932305672,
+      "completion_time": 18.66846393230567,
+      "vehicle_quadrant_before": "UPPER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 3,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 4
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 3,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 3
+      }
+    },
+    {
+      "assignment_id": "A0012",
+      "incident_id": "I046",
+      "vehicle_id": "V01",
+      "priority": 1,
+      "dispatch_time": 4,
+      "vehicle_x_before": 33.16164058668624,
+      "vehicle_y_before": 21.26654373400697,
+      "incident_x": 29.57872130135688,
+      "incident_y": 24.72582392581519,
+      "distance": 4.980354410142092,
+      "response_time": 4.980354410142092,
+      "arrival_time": 8.980354410142091,
+      "completion_time": 16.98035441014209,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 3,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 3
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 2,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 3
+      }
+    },
+    {
+      "assignment_id": "A0013",
+      "incident_id": "I086",
+      "vehicle_id": "V06",
+      "priority": 1,
+      "dispatch_time": 4,
+      "vehicle_x_before": 41.02133847038704,
+      "vehicle_y_before": 80.33335181772085,
+      "incident_x": 35.43935138814288,
+      "incident_y": 86.5427439717873,
+      "distance": 8.349558713448435,
+      "response_time": 8.349558713448435,
+      "arrival_time": 12.349558713448435,
+      "completion_time": 20.349558713448435,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 2,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 3
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 2,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 3
+      }
+    },
+    {
+      "assignment_id": "A0014",
+      "incident_id": "I045",
+      "vehicle_id": "V18",
+      "priority": 3,
+      "dispatch_time": 5,
+      "vehicle_x_before": 89.33241199833944,
+      "vehicle_y_before": 82.19821250204606,
+      "incident_x": 98.06186668156082,
+      "incident_y": 99.9713705510925,
+      "distance": 19.801225368718978,
+      "response_time": 19.801225368718978,
+      "arrival_time": 24.801225368718978,
+      "completion_time": 32.801225368718974,
+      "vehicle_quadrant_before": "UPPER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 2,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 3
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 2,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 2
+      }
+    },
+    {
+      "assignment_id": "A0015",
+      "incident_id": "I012",
+      "vehicle_id": "V04",
+      "priority": 1,
+      "dispatch_time": 5,
+      "vehicle_x_before": 37.82982087548189,
+      "vehicle_y_before": 15.099933181975267,
+      "incident_x": 79.63340154893571,
+      "incident_y": 14.938749257181916,
+      "distance": 41.80389141431181,
+      "response_time": 41.80389141431181,
+      "arrival_time": 46.80389141431181,
+      "completion_time": 54.80389141431181,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 2,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 2
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 2
+      }
+    },
+    {
+      "assignment_id": "A0016",
+      "incident_id": "I038",
+      "vehicle_id": "V16",
+      "priority": 1,
+      "dispatch_time": 5,
+      "vehicle_x_before": 82.9224120846286,
+      "vehicle_y_before": 80.815864224765,
+      "incident_x": 41.898703978461796,
+      "incident_y": 31.796764151122993,
+      "distance": 63.92039423227696,
+      "response_time": 63.92039423227696,
+      "arrival_time": 68.92039423227696,
+      "completion_time": 76.92039423227696,
+      "vehicle_quadrant_before": "UPPER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 2
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 1
+      }
+    },
+    {
+      "assignment_id": "A0017",
+      "incident_id": "I076",
+      "vehicle_id": "V14",
+      "priority": 1,
+      "dispatch_time": 6,
+      "vehicle_x_before": 62.41783715124831,
+      "vehicle_y_before": 20.337722656804928,
+      "incident_x": 99.46819239658146,
+      "incident_y": 21.809064891000652,
+      "distance": 37.079558678273315,
+      "response_time": 37.079558678273315,
+      "arrival_time": 43.079558678273315,
+      "completion_time": 51.079558678273315,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 1
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 1
+      }
+    },
+    {
+      "assignment_id": "A0018",
+      "incident_id": "I064",
+      "vehicle_id": "V03",
+      "priority": 3,
+      "dispatch_time": 7,
+      "vehicle_x_before": 36.391658698480214,
+      "vehicle_y_before": 27.55131670194802,
+      "incident_x": 85.6703490508859,
+      "incident_y": 21.303336924260375,
+      "distance": 49.67319774436387,
+      "response_time": 49.67319774436387,
+      "arrival_time": 56.67319774436387,
+      "completion_time": 64.67319774436388,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 1
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 1
+      }
+    },
+    {
+      "assignment_id": "A0019",
+      "incident_id": "I089",
+      "vehicle_id": "V09",
+      "priority": 2,
+      "dispatch_time": 7,
+      "vehicle_x_before": 43.88918909530171,
+      "vehicle_y_before": 84.92741159593373,
+      "incident_x": 53.52378108879851,
+      "incident_y": 45.643208005156986,
+      "distance": 40.448411769101014,
+      "response_time": 40.448411769101014,
+      "arrival_time": 47.448411769101014,
+      "completion_time": 55.448411769101014,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 1
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 1
+      }
+    },
+    {
+      "assignment_id": "A0020",
+      "incident_id": "I020",
+      "vehicle_id": "V17",
+      "priority": 1,
+      "dispatch_time": 8,
+      "vehicle_x_before": 76.56496026951046,
+      "vehicle_y_before": 94.8275983780857,
+      "incident_x": 18.93507983153292,
+      "incident_y": 21.97360458758604,
+      "distance": 92.89191315998261,
+      "response_time": 92.89191315998261,
+      "arrival_time": 100.89191315998261,
+      "completion_time": 108.89191315998261,
+      "vehicle_quadrant_before": "UPPER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 1
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0021",
+      "incident_id": "I055",
+      "vehicle_id": "V13",
+      "priority": 2,
+      "dispatch_time": 14,
+      "vehicle_x_before": 92.64303765483909,
+      "vehicle_y_before": 21.72143845536112,
+      "incident_x": 39.145701023299,
+      "incident_y": 10.693505478017329,
+      "distance": 54.62215971948663,
+      "response_time": 58.62215971948663,
+      "arrival_time": 68.62215971948663,
+      "completion_time": 76.62215971948663,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0022",
+      "incident_id": "I048",
+      "vehicle_id": "V12",
+      "priority": 1,
+      "dispatch_time": 15,
+      "vehicle_x_before": 56.557418570074624,
+      "vehicle_y_before": 17.252688548626793,
+      "incident_x": 61.192101435996214,
+      "incident_y": 29.645535397135347,
+      "distance": 13.231135184792558,
+      "response_time": 20.231135184792556,
+      "arrival_time": 28.231135184792556,
+      "completion_time": 36.23113518479256,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0023",
+      "incident_id": "I100",
+      "vehicle_id": "V01",
+      "priority": 3,
+      "dispatch_time": 17,
+      "vehicle_x_before": 29.57872130135688,
+      "vehicle_y_before": 24.72582392581519,
+      "incident_x": 80.47125818634015,
+      "incident_y": 11.870312124580584,
+      "distance": 52.49108966540002,
+      "response_time": 52.49108966540002,
+      "arrival_time": 69.49108966540001,
+      "completion_time": 77.49108966540001,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0024",
+      "incident_id": "I019",
+      "vehicle_id": "V07",
+      "priority": 3,
+      "dispatch_time": 19,
+      "vehicle_x_before": 15.43462526047621,
+      "vehicle_y_before": 68.44818906712905,
+      "incident_x": 36.2733836951477,
+      "incident_y": 90.37090504501546,
+      "distance": 30.246641614329157,
+      "response_time": 31.246641614329157,
+      "arrival_time": 49.24664161432916,
+      "completion_time": 57.24664161432916,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 1
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 1
+      }
+    },
+    {
+      "assignment_id": "A0025",
+      "incident_id": "I082",
+      "vehicle_id": "V19",
+      "priority": 1,
+      "dispatch_time": 19,
+      "vehicle_x_before": 72.54173898200555,
+      "vehicle_y_before": 60.96057189732197,
+      "incident_x": 5.901732071291188,
+      "incident_y": 6.456583797392923,
+      "distance": 86.09050609595268,
+      "response_time": 97.09050609595268,
+      "arrival_time": 105.09050609595268,
+      "completion_time": 113.09050609595268,
+      "vehicle_quadrant_before": "UPPER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 1
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0026",
+      "incident_id": "I015",
+      "vehicle_id": "V15",
+      "priority": 1,
+      "dispatch_time": 20,
+      "vehicle_x_before": 74.29712219543717,
+      "vehicle_y_before": 41.296248934609814,
+      "incident_x": 12.371898673638636,
+      "incident_y": 32.486112463910565,
+      "distance": 62.548795454885095,
+      "response_time": 70.5487954548851,
+      "arrival_time": 82.5487954548851,
+      "completion_time": 90.5487954548851,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0027",
+      "incident_id": "I098",
+      "vehicle_id": "V06",
+      "priority": 1,
+      "dispatch_time": 21,
+      "vehicle_x_before": 35.43935138814288,
+      "vehicle_y_before": 86.5427439717873,
+      "incident_x": 30.574891015682848,
+      "incident_y": 46.38805888410247,
+      "distance": 40.448259656088695,
+      "response_time": 48.448259656088695,
+      "arrival_time": 61.448259656088695,
+      "completion_time": 69.4482596560887,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0028",
+      "incident_id": "I052",
+      "vehicle_id": "V05",
+      "priority": 1,
+      "dispatch_time": 21,
+      "vehicle_x_before": 4.853782685736596,
+      "vehicle_y_before": 5.089592122002928,
+      "incident_x": 65.92942189457673,
+      "incident_y": 62.811404644553505,
+      "distance": 84.03595269678858,
+      "response_time": 91.03595269678858,
+      "arrival_time": 105.03595269678858,
+      "completion_time": 113.03595269678858,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0029",
+      "incident_id": "I099",
+      "vehicle_id": "V20",
+      "priority": 2,
+      "dispatch_time": 24,
+      "vehicle_x_before": 89.7252227330544,
+      "vehicle_y_before": 57.06963846252741,
+      "incident_x": 46.48562091156754,
+      "incident_y": 56.945133373364534,
+      "distance": 43.23978107250264,
+      "response_time": 45.23978107250264,
+      "arrival_time": 67.23978107250264,
+      "completion_time": 75.23978107250264,
+      "vehicle_quadrant_before": "UPPER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 1
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0030",
+      "incident_id": "I043",
+      "vehicle_id": "V10",
+      "priority": 2,
+      "dispatch_time": 28,
+      "vehicle_x_before": 15.479080155049708,
+      "vehicle_y_before": 54.863980737850795,
+      "incident_x": 10.347716575250466,
+      "incident_y": 67.588914996716,
+      "distance": 13.72059926098461,
+      "response_time": 17.72059926098461,
+      "arrival_time": 41.72059926098461,
+      "completion_time": 49.72059926098461,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 2,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0031",
+      "incident_id": "I031",
+      "vehicle_id": "V08",
+      "priority": 2,
+      "dispatch_time": 28,
+      "vehicle_x_before": 26.440451511712904,
+      "vehicle_y_before": 64.54877162853995,
+      "incident_x": 23.260831998836572,
+      "incident_y": 96.70741633769647,
+      "distance": 32.31545156386375,
+      "response_time": 32.31545156386375,
+      "arrival_time": 60.31545156386375,
+      "completion_time": 68.31545156386375,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0032",
+      "incident_id": "I034",
+      "vehicle_id": "V11",
+      "priority": 2,
+      "dispatch_time": 32,
+      "vehicle_x_before": 96.49350096977827,
+      "vehicle_y_before": 19.238552624845727,
+      "incident_x": 35.29624192892029,
+      "incident_y": 93.13712428375229,
+      "distance": 95.94844140130898,
+      "response_time": 97.94844140130898,
+      "arrival_time": 127.94844140130898,
+      "completion_time": 135.94844140130897,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0033",
+      "incident_id": "I003",
+      "vehicle_id": "V18",
+      "priority": 2,
+      "dispatch_time": 33,
+      "vehicle_x_before": 98.06186668156082,
+      "vehicle_y_before": 99.9713705510925,
+      "incident_x": 36.32240629490521,
+      "incident_y": 68.2796424982871,
+      "distance": 69.3983183932319,
+      "response_time": 69.3983183932319,
+      "arrival_time": 102.3983183932319,
+      "completion_time": 110.3983183932319,
+      "vehicle_quadrant_before": "UPPER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 1
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0034",
+      "incident_id": "I013",
+      "vehicle_id": "V02",
+      "priority": 2,
+      "dispatch_time": 34,
+      "vehicle_x_before": 9.29933957253468,
+      "vehicle_y_before": 27.90840778561794,
+      "incident_x": 88.8229602411022,
+      "incident_y": 88.62874567132391,
+      "distance": 100.05481336343854,
+      "response_time": 101.05481336343854,
+      "arrival_time": 134.05481336343854,
+      "completion_time": 142.05481336343854,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0035",
+      "incident_id": "I068",
+      "vehicle_id": "V12",
+      "priority": 3,
+      "dispatch_time": 37,
+      "vehicle_x_before": 61.192101435996214,
+      "vehicle_y_before": 29.645535397135347,
+      "incident_x": 8.05743980799104,
+      "incident_y": 77.02179034859259,
+      "distance": 71.18849485378998,
+      "response_time": 73.18849485378998,
+      "arrival_time": 108.18849485378998,
+      "completion_time": 116.18849485378998,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0036",
+      "incident_id": "I024",
+      "vehicle_id": "V10",
+      "priority": 3,
+      "dispatch_time": 50,
+      "vehicle_x_before": 10.347716575250466,
+      "vehicle_y_before": 67.588914996716,
+      "incident_x": 47.03482992592729,
+      "incident_y": 34.80308373133097,
+      "distance": 49.202185091393126,
+      "response_time": 63.202185091393126,
+      "arrival_time": 99.20218509139312,
+      "completion_time": 107.20218509139312,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0037",
+      "incident_id": "I059",
+      "vehicle_id": "V14",
+      "priority": 3,
+      "dispatch_time": 52,
+      "vehicle_x_before": 99.46819239658146,
+      "vehicle_y_before": 21.809064891000652,
+      "incident_x": 15.156157563262585,
+      "incident_y": 2.056508170230542,
+      "distance": 86.59493469448438,
+      "response_time": 99.59493469448438,
+      "arrival_time": 138.59493469448438,
+      "completion_time": 146.59493469448438,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0038",
+      "incident_id": "I001",
+      "vehicle_id": "V04",
+      "priority": 3,
+      "dispatch_time": 55,
+      "vehicle_x_before": 79.63340154893571,
+      "vehicle_y_before": 14.938749257181916,
+      "incident_x": 56.324820427790414,
+      "incident_y": 77.35498652638375,
+      "distance": 66.62639588576221,
+      "response_time": 79.62639588576221,
+      "arrival_time": 121.62639588576221,
+      "completion_time": 129.6263958857622,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0039",
+      "incident_id": "I026",
+      "vehicle_id": "V09",
+      "priority": 3,
+      "dispatch_time": 56,
+      "vehicle_x_before": 53.52378108879851,
+      "vehicle_y_before": 45.643208005156986,
+      "incident_x": 1.0122182642931077,
+      "incident_y": 79.39546456627679,
+      "distance": 62.423385467624485,
+      "response_time": 73.42338546762448,
+      "arrival_time": 118.42338546762448,
+      "completion_time": 126.42338546762448,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0040",
+      "incident_id": "I049",
+      "vehicle_id": "V07",
+      "priority": 3,
+      "dispatch_time": 58,
+      "vehicle_x_before": 36.2733836951477,
+      "vehicle_y_before": 90.37090504501546,
+      "incident_x": 80.85395761414075,
+      "incident_y": 46.65387921114211,
+      "distance": 62.438817403169594,
+      "response_time": 71.4388174031696,
+      "arrival_time": 120.4388174031696,
+      "completion_time": 128.4388174031696,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0041",
+      "incident_id": "I090",
+      "vehicle_id": "V03",
+      "priority": 3,
+      "dispatch_time": 65,
+      "vehicle_x_before": 85.6703490508859,
+      "vehicle_y_before": 21.303336924260375,
+      "incident_x": 41.787438707841474,
+      "incident_y": 41.480964000946116,
+      "distance": 48.29954921758046,
+      "response_time": 60.29954921758046,
+      "arrival_time": 113.29954921758046,
+      "completion_time": 121.29954921758046,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0042",
+      "incident_id": "I037",
+      "vehicle_id": "V08",
+      "priority": 2,
+      "dispatch_time": 69,
+      "vehicle_x_before": 23.260831998836572,
+      "vehicle_y_before": 96.70741633769647,
+      "incident_x": 52.67048912367797,
+      "incident_y": 83.8902101947424,
+      "distance": 32.081282790931446,
+      "response_time": 66.08128279093145,
+      "arrival_time": 101.08128279093145,
+      "completion_time": 109.08128279093145,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0043",
+      "incident_id": "I097",
+      "vehicle_id": "V06",
+      "priority": 2,
+      "dispatch_time": 70,
+      "vehicle_x_before": 30.574891015682848,
+      "vehicle_y_before": 46.38805888410247,
+      "incident_x": 56.567529952917184,
+      "incident_y": 20.738031465444507,
+      "distance": 36.51768318909807,
+      "response_time": 70.51768318909808,
+      "arrival_time": 106.51768318909808,
+      "completion_time": 114.51768318909808,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0044",
+      "incident_id": "I053",
+      "vehicle_id": "V20",
+      "priority": 2,
+      "dispatch_time": 76,
+      "vehicle_x_before": 46.48562091156754,
+      "vehicle_y_before": 56.945133373364534,
+      "incident_x": 78.1881226917061,
+      "incident_y": 93.79894275335296,
+      "distance": 48.61328918038988,
+      "response_time": 80.61328918038987,
+      "arrival_time": 124.61328918038987,
+      "completion_time": 132.61328918038987,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0045",
+      "incident_id": "I004",
+      "vehicle_id": "V16",
+      "priority": 2,
+      "dispatch_time": 77,
+      "vehicle_x_before": 41.898703978461796,
+      "vehicle_y_before": 31.796764151122993,
+      "incident_x": 13.676894071323186,
+      "incident_y": 87.43695390018931,
+      "distance": 62.388310361371154,
+      "response_time": 93.38831036137115,
+      "arrival_time": 139.38831036137117,
+      "completion_time": 147.38831036137117,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 2,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0046",
+      "incident_id": "I079",
+      "vehicle_id": "V13",
+      "priority": 2,
+      "dispatch_time": 77,
+      "vehicle_x_before": 39.145701023299,
+      "vehicle_y_before": 10.693505478017329,
+      "incident_x": 12.644003906485091,
+      "incident_y": 98.54522562980064,
+      "distance": 91.76200021631281,
+      "response_time": 117.76200021631281,
+      "arrival_time": 168.7620002163128,
+      "completion_time": 176.7620002163128,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0047",
+      "incident_id": "I021",
+      "vehicle_id": "V01",
+      "priority": 2,
+      "dispatch_time": 78,
+      "vehicle_x_before": 80.47125818634015,
+      "vehicle_y_before": 11.870312124580584,
+      "incident_x": 52.45365677033026,
+      "incident_y": 75.07615803154745,
+      "distance": 69.13729055959338,
+      "response_time": 94.13729055959338,
+      "arrival_time": 147.1372905595934,
+      "completion_time": 155.1372905595934,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0048",
+      "incident_id": "I092",
+      "vehicle_id": "V15",
+      "priority": 2,
+      "dispatch_time": 91,
+      "vehicle_x_before": 12.371898673638636,
+      "vehicle_y_before": 32.486112463910565,
+      "incident_x": 81.74247937210012,
+      "incident_y": 14.49811058632805,
+      "distance": 71.66481478375333,
+      "response_time": 108.66481478375333,
+      "arrival_time": 162.66481478375334,
+      "completion_time": 170.66481478375334,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0049",
+      "incident_id": "I074",
+      "vehicle_id": "V10",
+      "priority": 2,
+      "dispatch_time": 108,
+      "vehicle_x_before": 47.03482992592729,
+      "vehicle_y_before": 34.80308373133097,
+      "incident_x": 76.60236619902861,
+      "incident_y": 95.71577175701118,
+      "distance": 67.70963567894164,
+      "response_time": 119.70963567894164,
+      "arrival_time": 175.70963567894165,
+      "completion_time": 183.70963567894165,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0050",
+      "incident_id": "I087",
+      "vehicle_id": "V17",
+      "priority": 2,
+      "dispatch_time": 109,
+      "vehicle_x_before": 18.93507983153292,
+      "vehicle_y_before": 21.97360458758604,
+      "incident_x": 1.103106844840096,
+      "incident_y": 60.05412088987835,
+      "distance": 42.048840441173795,
+      "response_time": 94.0488404411738,
+      "arrival_time": 151.0488404411738,
+      "completion_time": 159.0488404411738,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0051",
+      "incident_id": "I039",
+      "vehicle_id": "V08",
+      "priority": 2,
+      "dispatch_time": 110,
+      "vehicle_x_before": 52.67048912367797,
+      "vehicle_y_before": 83.8902101947424,
+      "incident_x": 60.304368688559094,
+      "incident_y": 25.670026487370013,
+      "distance": 58.71853121571842,
+      "response_time": 109.71853121571843,
+      "arrival_time": 168.71853121571843,
+      "completion_time": 176.71853121571843,
+      "vehicle_quadrant_before": "UPPER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 1
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0052",
+      "incident_id": "I067",
+      "vehicle_id": "V18",
+      "priority": 2,
+      "dispatch_time": 111,
+      "vehicle_x_before": 36.32240629490521,
+      "vehicle_y_before": 68.2796424982871,
+      "incident_x": 51.574269427400445,
+      "incident_y": 13.050979315867684,
+      "distance": 57.29593847673234,
+      "response_time": 109.29593847673235,
+      "arrival_time": 168.29593847673235,
+      "completion_time": 176.29593847673235,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0053",
+      "incident_id": "I094",
+      "vehicle_id": "V05",
+      "priority": 1,
+      "dispatch_time": 114,
+      "vehicle_x_before": 65.92942189457673,
+      "vehicle_y_before": 62.811404644553505,
+      "incident_x": 62.35957006258728,
+      "incident_y": 44.144708467363614,
+      "distance": 19.004983248450237,
+      "response_time": 118.00498324845023,
+      "arrival_time": 133.00498324845023,
+      "completion_time": 141.00498324845023,
+      "vehicle_quadrant_before": "UPPER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 1
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0054",
+      "incident_id": "I062",
+      "vehicle_id": "V19",
+      "priority": 1,
+      "dispatch_time": 114,
+      "vehicle_x_before": 5.901732071291188,
+      "vehicle_y_before": 6.456583797392923,
+      "incident_x": 76.31537799697139,
+      "incident_y": 71.16696376063997,
+      "distance": 95.6321849982257,
+      "response_time": 193.63218499822568,
+      "arrival_time": 209.63218499822568,
+      "completion_time": 217.63218499822568,
+      "vehicle_quadrant_before": "LOWER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 1,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0055",
+      "incident_id": "I011",
+      "vehicle_id": "V06",
+      "priority": 1,
+      "dispatch_time": 115,
+      "vehicle_x_before": 56.567529952917184,
+      "vehicle_y_before": 20.738031465444507,
+      "incident_x": 61.37148741359576,
+      "incident_y": 67.6712966288601,
+      "distance": 47.17848435657391,
+      "response_time": 145.1784843565739,
+      "arrival_time": 162.1784843565739,
+      "completion_time": 170.1784843565739,
+      "vehicle_quadrant_before": "LOWER_RIGHT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 1,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    },
+    {
+      "assignment_id": "A0056",
+      "incident_id": "I042",
+      "vehicle_id": "V12",
+      "priority": 1,
+      "dispatch_time": 117,
+      "vehicle_x_before": 8.05743980799104,
+      "vehicle_y_before": 77.02179034859259,
+      "incident_x": 1.4246809103401037,
+      "incident_y": 59.24811417109353,
+      "distance": 18.970952940138908,
+      "response_time": 118.97095294013891,
+      "arrival_time": 135.97095294013891,
+      "completion_time": 143.97095294013891,
+      "vehicle_quadrant_before": "UPPER_LEFT",
+      "idle_counts_before": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 1,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      },
+      "idle_counts_after": {
+        "LOWER_LEFT": 0,
+        "UPPER_LEFT": 0,
+        "LOWER_RIGHT": 0,
+        "UPPER_RIGHT": 0
+      }
+    }
+  ],
+  "metrics": {
+    "weighted_response_sum": 10735.821107100102,
+    "weighted_response_mean": 191.7110911982161,
+    "p3_mean_response": 56.84018438580875,
+    "p3_median_response": 61.7508671544868,
+    "p3_max_response": 99.59493469448438,
+    "p3_min_response": 8.09629562308865,
+    "p3_count": 12,
+    "total_outage_minutes": 115,
+    "outage_minutes_LL": 114,
+    "outage_minutes_UL": 114,
+    "outage_minutes_LR": 115,
+    "outage_minutes_UR": 113
+  },
+  "coverage_timeline": [
+    {
+      "minute": 0,
+      "idle_LL": 5,
+      "idle_UL": 5,
+      "idle_LR": 4,
+      "idle_UR": 4,
+      "coverage_healthy": true,
+      "outage": 0
+    },
+    {
+      "minute": 1,
+      "idle_LL": 5,
+      "idle_UL": 4,
+      "idle_LR": 4,
+      "idle_UR": 4,
+      "coverage_healthy": true,
+      "outage": 0
+    },
+    {
+      "minute": 2,
+      "idle_LL": 4,
+      "idle_UL": 2,
+      "idle_LR": 4,
+      "idle_UR": 4,
+      "coverage_healthy": true,
+      "outage": 0
+    },
+    {
+      "minute": 3,
+      "idle_LL": 3,
+      "idle_UL": 2,
+      "idle_LR": 1,
+      "idle_UR": 4,
+      "coverage_healthy": true,
+      "outage": 0
+    },
+    {
+      "minute": 4,
+      "idle_LL": 2,
+      "idle_UL": 1,
+      "idle_LR": 1,
+      "idle_UR": 3,
+      "coverage_healthy": true,
+      "outage": 0
+    },
+    {
+      "minute": 5,
+      "idle_LL": 1,
+      "idle_UL": 1,
+      "idle_LR": 1,
+      "idle_UR": 1,
+      "coverage_healthy": true,
+      "outage": 0
+    },
+    {
+      "minute": 6,
+      "idle_LL": 1,
+      "idle_UL": 1,
+      "idle_LR": 0,
+      "idle_UR": 1,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 7,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 1,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 8,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 9,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 10,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 11,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 12,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 13,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 14,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 15,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 16,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 17,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 18,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 19,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 20,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 21,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 22,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 23,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 24,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 25,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 26,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 27,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 28,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 29,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 30,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 31,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 32,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 33,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 34,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 35,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 36,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 37,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 38,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 39,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 40,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 41,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 42,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 43,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 44,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 45,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 46,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 47,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 48,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 49,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 50,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 51,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 52,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 53,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 54,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 55,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 56,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 57,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 58,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 59,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 60,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 61,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 62,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 63,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 64,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 65,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 66,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 67,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 68,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 69,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 70,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 71,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 72,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 73,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 74,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 75,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 76,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 77,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 78,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 79,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 80,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 81,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 82,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 83,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 84,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 85,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 86,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 87,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 88,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 89,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 90,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 91,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 92,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 93,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 94,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 95,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 96,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 97,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 98,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 99,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 100,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 101,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 102,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 103,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 104,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 105,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 106,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 107,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 108,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 109,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 110,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 111,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 112,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 113,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 114,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 115,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 116,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 117,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 118,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 119,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    },
+    {
+      "minute": 120,
+      "idle_LL": 0,
+      "idle_UL": 0,
+      "idle_LR": 0,
+      "idle_UR": 0,
+      "coverage_healthy": false,
+      "outage": 1
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "V01",
+      "x": 52.45365677033026,
+      "y": 75.07615803154745,
+      "status": "BUSY",
+      "current_incident_id": "I021",
+      "completion_time": 155.1372905595934
+    },
+    {
+      "id": "V02",
+      "x": 88.8229602411022,
+      "y": 88.62874567132391,
+      "status": "BUSY",
+      "current_incident_id": "I013",
+      "completion_time": 142.05481336343854
+    },
+    {
+      "id": "V03",
+      "x": 41.787438707841474,
+      "y": 41.480964000946116,
+      "status": "BUSY",
+      "current_incident_id": "I090",
+      "completion_time": 121.29954921758046
+    },
+    {
+      "id": "V04",
+      "x": 56.324820427790414,
+      "y": 77.35498652638375,
+      "status": "BUSY",
+      "current_incident_id": "I001",
+      "completion_time": 129.6263958857622
+    },
+    {
+      "id": "V05",
+      "x": 62.35957006258728,
+      "y": 44.144708467363614,
+      "status": "BUSY",
+      "current_incident_id": "I094",
+      "completion_time": 141.00498324845023
+    },
+    {
+      "id": "V06",
+      "x": 61.37148741359576,
+      "y": 67.6712966288601,
+      "status": "BUSY",
+      "current_incident_id": "I011",
+      "completion_time": 170.1784843565739
+    },
+    {
+      "id": "V07",
+      "x": 80.85395761414075,
+      "y": 46.65387921114211,
+      "status": "BUSY",
+      "current_incident_id": "I049",
+      "completion_time": 128.4388174031696
+    },
+    {
+      "id": "V08",
+      "x": 60.304368688559094,
+      "y": 25.670026487370013,
+      "status": "BUSY",
+      "current_incident_id": "I039",
+      "completion_time": 176.71853121571843
+    },
+    {
+      "id": "V09",
+      "x": 1.0122182642931077,
+      "y": 79.39546456627679,
+      "status": "BUSY",
+      "current_incident_id": "I026",
+      "completion_time": 126.42338546762448
+    },
+    {
+      "id": "V10",
+      "x": 76.60236619902861,
+      "y": 95.71577175701118,
+      "status": "BUSY",
+      "current_incident_id": "I074",
+      "completion_time": 183.70963567894165
+    },
+    {
+      "id": "V11",
+      "x": 35.29624192892029,
+      "y": 93.13712428375229,
+      "status": "BUSY",
+      "current_incident_id": "I034",
+      "completion_time": 135.94844140130897
+    },
+    {
+      "id": "V12",
+      "x": 1.4246809103401037,
+      "y": 59.24811417109353,
+      "status": "BUSY",
+      "current_incident_id": "I042",
+      "completion_time": 143.97095294013891
+    },
+    {
+      "id": "V13",
+      "x": 12.644003906485091,
+      "y": 98.54522562980064,
+      "status": "BUSY",
+      "current_incident_id": "I079",
+      "completion_time": 176.7620002163128
+    },
+    {
+      "id": "V14",
+      "x": 15.156157563262585,
+      "y": 2.056508170230542,
+      "status": "BUSY",
+      "current_incident_id": "I059",
+      "completion_time": 146.59493469448438
+    },
+    {
+      "id": "V15",
+      "x": 81.74247937210012,
+      "y": 14.49811058632805,
+      "status": "BUSY",
+      "current_incident_id": "I092",
+      "completion_time": 170.66481478375334
+    },
+    {
+      "id": "V16",
+      "x": 13.676894071323186,
+      "y": 87.43695390018931,
+      "status": "BUSY",
+      "current_incident_id": "I004",
+      "completion_time": 147.38831036137117
+    },
+    {
+      "id": "V17",
+      "x": 1.103106844840096,
+      "y": 60.05412088987835,
+      "status": "BUSY",
+      "current_incident_id": "I087",
+      "completion_time": 159.0488404411738
+    },
+    {
+      "id": "V18",
+      "x": 51.574269427400445,
+      "y": 13.050979315867684,
+      "status": "BUSY",
+      "current_incident_id": "I067",
+      "completion_time": 176.29593847673235
+    },
+    {
+      "id": "V19",
+      "x": 76.31537799697139,
+      "y": 71.16696376063997,
+      "status": "BUSY",
+      "current_incident_id": "I062",
+      "completion_time": 217.63218499822568
+    },
+    {
+      "id": "V20",
+      "x": 78.1881226917061,
+      "y": 93.79894275335296,
+      "status": "BUSY",
+      "current_incident_id": "I053",
+      "completion_time": 132.61328918038987
+    }
+  ],
+  "incidents": [
+    {
+      "id": "I001",
+      "arrival_minute": 42,
+      "x": 56.324820427790414,
+      "y": 77.35498652638375,
+      "priority": 3,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V04",
+      "dispatch_time": 55,
+      "response_time": 79.62639588576221,
+      "completion_time": 129.6263958857622
+    },
+    {
+      "id": "I002",
+      "arrival_minute": 1,
+      "x": 15.43462526047621,
+      "y": 68.44818906712905,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V07",
+      "dispatch_time": 1,
+      "response_time": 9.154451471298744,
+      "completion_time": 18.154451471298742
+    },
+    {
+      "id": "I003",
+      "arrival_minute": 33,
+      "x": 36.32240629490521,
+      "y": 68.2796424982871,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V18",
+      "dispatch_time": 33,
+      "response_time": 69.3983183932319,
+      "completion_time": 110.3983183932319
+    },
+    {
+      "id": "I004",
+      "arrival_minute": 46,
+      "x": 13.676894071323186,
+      "y": 87.43695390018931,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V16",
+      "dispatch_time": 77,
+      "response_time": 93.38831036137115,
+      "completion_time": 147.38831036137117
+    },
+    {
+      "id": "I005",
+      "arrival_minute": 50,
+      "x": 11.61018741269545,
+      "y": 27.388922631768786,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I006",
+      "arrival_minute": 58,
+      "x": 73.91810364356853,
+      "y": 56.36191364451144,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I007",
+      "arrival_minute": 26,
+      "x": 73.92413615373525,
+      "y": 32.71038991147262,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I008",
+      "arrival_minute": 36,
+      "x": 49.9538390452363,
+      "y": 90.81254009947966,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I009",
+      "arrival_minute": 47,
+      "x": 0.7235598090972073,
+      "y": 55.450364137631304,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I010",
+      "arrival_minute": 51,
+      "x": 96.93557049930823,
+      "y": 33.02132767632335,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I011",
+      "arrival_minute": 17,
+      "x": 61.37148741359576,
+      "y": 67.6712966288601,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V06",
+      "dispatch_time": 115,
+      "response_time": 145.1784843565739,
+      "completion_time": 170.1784843565739
+    },
+    {
+      "id": "I012",
+      "arrival_minute": 5,
+      "x": 79.63340154893571,
+      "y": 14.938749257181916,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V04",
+      "dispatch_time": 5,
+      "response_time": 41.80389141431181,
+      "completion_time": 54.80389141431181
+    },
+    {
+      "id": "I013",
+      "arrival_minute": 33,
+      "x": 88.8229602411022,
+      "y": 88.62874567132391,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V02",
+      "dispatch_time": 34,
+      "response_time": 101.05481336343854,
+      "completion_time": 142.05481336343854
+    },
+    {
+      "id": "I014",
+      "arrival_minute": 3,
+      "x": 96.49350096977827,
+      "y": 19.238552624845727,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V11",
+      "dispatch_time": 3,
+      "response_time": 20.61424448061135,
+      "completion_time": 31.61424448061135
+    },
+    {
+      "id": "I015",
+      "arrival_minute": 12,
+      "x": 12.371898673638636,
+      "y": 32.486112463910565,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V15",
+      "dispatch_time": 20,
+      "response_time": 70.5487954548851,
+      "completion_time": 90.5487954548851
+    },
+    {
+      "id": "I016",
+      "arrival_minute": 3,
+      "x": 74.29712219543717,
+      "y": 41.296248934609814,
+      "priority": 3,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V15",
+      "dispatch_time": 3,
+      "response_time": 8.09629562308865,
+      "completion_time": 19.09629562308865
+    },
+    {
+      "id": "I017",
+      "arrival_minute": 30,
+      "x": 82.47896122115085,
+      "y": 99.98744738912843,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I018",
+      "arrival_minute": 23,
+      "x": 47.51822558578187,
+      "y": 50.75046869141896,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I019",
+      "arrival_minute": 18,
+      "x": 36.2733836951477,
+      "y": 90.37090504501546,
+      "priority": 3,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V07",
+      "dispatch_time": 19,
+      "response_time": 31.246641614329157,
+      "completion_time": 57.24664161432916
+    },
+    {
+      "id": "I020",
+      "arrival_minute": 8,
+      "x": 18.93507983153292,
+      "y": 21.97360458758604,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V17",
+      "dispatch_time": 8,
+      "response_time": 92.89191315998261,
+      "completion_time": 108.89191315998261
+    },
+    {
+      "id": "I021",
+      "arrival_minute": 53,
+      "x": 52.45365677033026,
+      "y": 75.07615803154745,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V01",
+      "dispatch_time": 78,
+      "response_time": 94.13729055959338,
+      "completion_time": 155.1372905595934
+    },
+    {
+      "id": "I022",
+      "arrival_minute": 4,
+      "x": 72.54173898200555,
+      "y": 60.96057189732197,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V19",
+      "dispatch_time": 4,
+      "response_time": 6.668463932305672,
+      "completion_time": 18.66846393230567
+    },
+    {
+      "id": "I023",
+      "arrival_minute": 33,
+      "x": 27.31678748262287,
+      "y": 92.31985717655337,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I024",
+      "arrival_minute": 36,
+      "x": 47.03482992592729,
+      "y": 34.80308373133097,
+      "priority": 3,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V10",
+      "dispatch_time": 50,
+      "response_time": 63.202185091393126,
+      "completion_time": 107.20218509139312
+    },
+    {
+      "id": "I025",
+      "arrival_minute": 3,
+      "x": 9.29933957253468,
+      "y": 27.90840778561794,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V02",
+      "dispatch_time": 3,
+      "response_time": 22.594605984953667,
+      "completion_time": 33.59460598495367
+    },
+    {
+      "id": "I026",
+      "arrival_minute": 45,
+      "x": 1.0122182642931077,
+      "y": 79.39546456627679,
+      "priority": 3,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V09",
+      "dispatch_time": 56,
+      "response_time": 73.42338546762448,
+      "completion_time": 126.42338546762448
+    },
+    {
+      "id": "I027",
+      "arrival_minute": 44,
+      "x": 52.80408858724396,
+      "y": 72.3670586620063,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I028",
+      "arrival_minute": 54,
+      "x": 0.9458462949822333,
+      "y": 92.3496768478681,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I029",
+      "arrival_minute": 48,
+      "x": 76.90019215610063,
+      "y": 34.24628550726653,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I030",
+      "arrival_minute": 0,
+      "x": 89.7252227330544,
+      "y": 57.06963846252741,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V20",
+      "dispatch_time": 0,
+      "response_time": 15.033407912026577,
+      "completion_time": 23.033407912026576
+    },
+    {
+      "id": "I031",
+      "arrival_minute": 28,
+      "x": 23.260831998836572,
+      "y": 96.70741633769647,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V08",
+      "dispatch_time": 28,
+      "response_time": 32.31545156386375,
+      "completion_time": 68.31545156386375
+    },
+    {
+      "id": "I032",
+      "arrival_minute": 43,
+      "x": 6.737270094401948,
+      "y": 44.67627489364592,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I033",
+      "arrival_minute": 28,
+      "x": 62.93169443308003,
+      "y": 60.6272935900745,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I034",
+      "arrival_minute": 30,
+      "x": 35.29624192892029,
+      "y": 93.13712428375229,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V11",
+      "dispatch_time": 32,
+      "response_time": 97.94844140130898,
+      "completion_time": 135.94844140130897
+    },
+    {
+      "id": "I035",
+      "arrival_minute": 3,
+      "x": 56.557418570074624,
+      "y": 17.252688548626793,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V12",
+      "dispatch_time": 3,
+      "response_time": 3.0249313353833887,
+      "completion_time": 14.024931335383389
+    },
+    {
+      "id": "I036",
+      "arrival_minute": 29,
+      "x": 83.00739743593044,
+      "y": 86.77716635679596,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I037",
+      "arrival_minute": 35,
+      "x": 52.67048912367797,
+      "y": 83.8902101947424,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V08",
+      "dispatch_time": 69,
+      "response_time": 66.08128279093145,
+      "completion_time": 109.08128279093145
+    },
+    {
+      "id": "I038",
+      "arrival_minute": 5,
+      "x": 41.898703978461796,
+      "y": 31.796764151122993,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V16",
+      "dispatch_time": 5,
+      "response_time": 63.92039423227696,
+      "completion_time": 76.92039423227696
+    },
+    {
+      "id": "I039",
+      "arrival_minute": 59,
+      "x": 60.304368688559094,
+      "y": 25.670026487370013,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V08",
+      "dispatch_time": 110,
+      "response_time": 109.71853121571843,
+      "completion_time": 176.71853121571843
+    },
+    {
+      "id": "I040",
+      "arrival_minute": 57,
+      "x": 10.313375345829067,
+      "y": 14.80340157941673,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I041",
+      "arrival_minute": 34,
+      "x": 5.205446693669469,
+      "y": 20.3136346238902,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I042",
+      "arrival_minute": 17,
+      "x": 1.4246809103401037,
+      "y": 59.24811417109353,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V12",
+      "dispatch_time": 117,
+      "response_time": 118.97095294013891,
+      "completion_time": 143.97095294013891
+    },
+    {
+      "id": "I043",
+      "arrival_minute": 24,
+      "x": 10.347716575250466,
+      "y": 67.588914996716,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V10",
+      "dispatch_time": 28,
+      "response_time": 17.72059926098461,
+      "completion_time": 49.72059926098461
+    },
+    {
+      "id": "I044",
+      "arrival_minute": 36,
+      "x": 83.51902752874535,
+      "y": 70.0298179967113,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I045",
+      "arrival_minute": 5,
+      "x": 98.06186668156082,
+      "y": 99.9713705510925,
+      "priority": 3,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V18",
+      "dispatch_time": 5,
+      "response_time": 19.801225368718978,
+      "completion_time": 32.801225368718974
+    },
+    {
+      "id": "I046",
+      "arrival_minute": 4,
+      "x": 29.57872130135688,
+      "y": 24.72582392581519,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V01",
+      "dispatch_time": 4,
+      "response_time": 4.980354410142092,
+      "completion_time": 16.98035441014209
+    },
+    {
+      "id": "I047",
+      "arrival_minute": 55,
+      "x": 27.98422357551116,
+      "y": 23.96379932522733,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I048",
+      "arrival_minute": 8,
+      "x": 61.192101435996214,
+      "y": 29.645535397135347,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V12",
+      "dispatch_time": 15,
+      "response_time": 20.231135184792556,
+      "completion_time": 36.23113518479256
+    },
+    {
+      "id": "I049",
+      "arrival_minute": 49,
+      "x": 80.85395761414075,
+      "y": 46.65387921114211,
+      "priority": 3,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V07",
+      "dispatch_time": 58,
+      "response_time": 71.4388174031696,
+      "completion_time": 128.4388174031696
+    },
+    {
+      "id": "I050",
+      "arrival_minute": 30,
+      "x": 54.66609090800289,
+      "y": 37.24924195279623,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I051",
+      "arrival_minute": 2,
+      "x": 15.479080155049708,
+      "y": 54.863980737850795,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V10",
+      "dispatch_time": 2,
+      "response_time": 17.7465553094261,
+      "completion_time": 27.7465553094261
+    },
+    {
+      "id": "I052",
+      "arrival_minute": 14,
+      "x": 65.92942189457673,
+      "y": 62.811404644553505,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V05",
+      "dispatch_time": 21,
+      "response_time": 91.03595269678858,
+      "completion_time": 113.03595269678858
+    },
+    {
+      "id": "I053",
+      "arrival_minute": 44,
+      "x": 78.1881226917061,
+      "y": 93.79894275335296,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V20",
+      "dispatch_time": 76,
+      "response_time": 80.61328918038987,
+      "completion_time": 132.61328918038987
+    },
+    {
+      "id": "I054",
+      "arrival_minute": 0,
+      "x": 92.64303765483909,
+      "y": 21.72143845536112,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V13",
+      "dispatch_time": 0,
+      "response_time": 5.9383383640248075,
+      "completion_time": 13.938338364024808
+    },
+    {
+      "id": "I055",
+      "arrival_minute": 10,
+      "x": 39.145701023299,
+      "y": 10.693505478017329,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V13",
+      "dispatch_time": 14,
+      "response_time": 58.62215971948663,
+      "completion_time": 76.62215971948663
+    },
+    {
+      "id": "I056",
+      "arrival_minute": 43,
+      "x": 66.06524025663231,
+      "y": 9.613505360459273,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I057",
+      "arrival_minute": 22,
+      "x": 30.452525679967025,
+      "y": 93.36358262139451,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I058",
+      "arrival_minute": 30,
+      "x": 30.53302962794211,
+      "y": 26.68401604447601,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I059",
+      "arrival_minute": 39,
+      "x": 15.156157563262585,
+      "y": 2.056508170230542,
+      "priority": 3,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V14",
+      "dispatch_time": 52,
+      "response_time": 99.59493469448438,
+      "completion_time": 146.59493469448438
+    },
+    {
+      "id": "I060",
+      "arrival_minute": 39,
+      "x": 95.16599262665532,
+      "y": 40.44302552287631,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I061",
+      "arrival_minute": 31,
+      "x": 80.79331600557305,
+      "y": 69.35398912672756,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I062",
+      "arrival_minute": 16,
+      "x": 76.31537799697139,
+      "y": 71.16696376063997,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V19",
+      "dispatch_time": 114,
+      "response_time": 193.63218499822568,
+      "completion_time": 217.63218499822568
+    },
+    {
+      "id": "I063",
+      "arrival_minute": 28,
+      "x": 58.698320513695535,
+      "y": 24.532853269681254,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I064",
+      "arrival_minute": 7,
+      "x": 85.6703490508859,
+      "y": 21.303336924260375,
+      "priority": 3,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V03",
+      "dispatch_time": 7,
+      "response_time": 49.67319774436387,
+      "completion_time": 64.67319774436388
+    },
+    {
+      "id": "I065",
+      "arrival_minute": 25,
+      "x": 70.45385385473347,
+      "y": 39.38948273723712,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I066",
+      "arrival_minute": 46,
+      "x": 78.38908374286177,
+      "y": 49.52505669533893,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I067",
+      "arrival_minute": 59,
+      "x": 51.574269427400445,
+      "y": 13.050979315867684,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V18",
+      "dispatch_time": 111,
+      "response_time": 109.29593847673235,
+      "completion_time": 176.29593847673235
+    },
+    {
+      "id": "I068",
+      "arrival_minute": 35,
+      "x": 8.05743980799104,
+      "y": 77.02179034859259,
+      "priority": 3,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V12",
+      "dispatch_time": 37,
+      "response_time": 73.18849485378998,
+      "completion_time": 116.18849485378998
+    },
+    {
+      "id": "I069",
+      "arrival_minute": 42,
+      "x": 98.38223778435294,
+      "y": 6.68504242696899,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I070",
+      "arrival_minute": 2,
+      "x": 26.440451511712904,
+      "y": 64.54877162853995,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V08",
+      "dispatch_time": 2,
+      "response_time": 17.33768033525274,
+      "completion_time": 27.33768033525274
+    },
+    {
+      "id": "I071",
+      "arrival_minute": 32,
+      "x": 58.685780708618154,
+      "y": 12.338774854908596,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I072",
+      "arrival_minute": 34,
+      "x": 86.68003173988794,
+      "y": 23.573382262687748,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I073",
+      "arrival_minute": 41,
+      "x": 97.9964414867807,
+      "y": 93.28284456034089,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I074",
+      "arrival_minute": 56,
+      "x": 76.60236619902861,
+      "y": 95.71577175701118,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V10",
+      "dispatch_time": 108,
+      "response_time": 119.70963567894164,
+      "completion_time": 183.70963567894165
+    },
+    {
+      "id": "I075",
+      "arrival_minute": 27,
+      "x": 31.20452400300745,
+      "y": 55.61588404154756,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I076",
+      "arrival_minute": 6,
+      "x": 99.46819239658146,
+      "y": 21.809064891000652,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V14",
+      "dispatch_time": 6,
+      "response_time": 37.079558678273315,
+      "completion_time": 51.079558678273315
+    },
+    {
+      "id": "I077",
+      "arrival_minute": 19,
+      "x": 74.34767349774803,
+      "y": 69.6861877182375,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I078",
+      "arrival_minute": 2,
+      "x": 4.853782685736596,
+      "y": 5.089592122002928,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V05",
+      "dispatch_time": 2,
+      "response_time": 10.555183052744795,
+      "completion_time": 20.555183052744795
+    },
+    {
+      "id": "I079",
+      "arrival_minute": 51,
+      "x": 12.644003906485091,
+      "y": 98.54522562980064,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V13",
+      "dispatch_time": 77,
+      "response_time": 117.76200021631281,
+      "completion_time": 176.7620002163128
+    },
+    {
+      "id": "I080",
+      "arrival_minute": 29,
+      "x": 82.71812673803846,
+      "y": 22.44247858123254,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I081",
+      "arrival_minute": 19,
+      "x": 83.29699850717263,
+      "y": 95.4732367830754,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I082",
+      "arrival_minute": 8,
+      "x": 5.901732071291188,
+      "y": 6.456583797392923,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V19",
+      "dispatch_time": 19,
+      "response_time": 97.09050609595268,
+      "completion_time": 113.09050609595268
+    },
+    {
+      "id": "I083",
+      "arrival_minute": 43,
+      "x": 58.436896556280374,
+      "y": 34.24446387652236,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I084",
+      "arrival_minute": 56,
+      "x": 55.99926560280266,
+      "y": 46.82379850872794,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I085",
+      "arrival_minute": 24,
+      "x": 73.23406922835188,
+      "y": 9.030281656219463,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I086",
+      "arrival_minute": 4,
+      "x": 35.43935138814288,
+      "y": 86.5427439717873,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V06",
+      "dispatch_time": 4,
+      "response_time": 8.349558713448435,
+      "completion_time": 20.349558713448435
+    },
+    {
+      "id": "I087",
+      "arrival_minute": 57,
+      "x": 1.103106844840096,
+      "y": 60.05412088987835,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V17",
+      "dispatch_time": 109,
+      "response_time": 94.0488404411738,
+      "completion_time": 159.0488404411738
+    },
+    {
+      "id": "I088",
+      "arrival_minute": 41,
+      "x": 15.604657878944128,
+      "y": 71.63982074451256,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I089",
+      "arrival_minute": 7,
+      "x": 53.52378108879851,
+      "y": 45.643208005156986,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V09",
+      "dispatch_time": 7,
+      "response_time": 40.448411769101014,
+      "completion_time": 55.448411769101014
+    },
+    {
+      "id": "I090",
+      "arrival_minute": 53,
+      "x": 41.787438707841474,
+      "y": 41.480964000946116,
+      "priority": 3,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V03",
+      "dispatch_time": 65,
+      "response_time": 60.29954921758046,
+      "completion_time": 121.29954921758046
+    },
+    {
+      "id": "I091",
+      "arrival_minute": 18,
+      "x": 77.42935711469417,
+      "y": 38.37113204727592,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I092",
+      "arrival_minute": 54,
+      "x": 81.74247937210012,
+      "y": 14.49811058632805,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V15",
+      "dispatch_time": 91,
+      "response_time": 108.66481478375333,
+      "completion_time": 170.66481478375334
+    },
+    {
+      "id": "I093",
+      "arrival_minute": 37,
+      "x": 82.74353789923177,
+      "y": 49.07463106980868,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I094",
+      "arrival_minute": 15,
+      "x": 62.35957006258728,
+      "y": 44.144708467363614,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V05",
+      "dispatch_time": 114,
+      "response_time": 118.00498324845023,
+      "completion_time": 141.00498324845023
+    },
+    {
+      "id": "I095",
+      "arrival_minute": 20,
+      "x": 86.32081316432354,
+      "y": 72.27536938851993,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I096",
+      "arrival_minute": 19,
+      "x": 24.697974497812847,
+      "y": 83.93028342659593,
+      "priority": 1,
+      "status": "WAITING",
+      "assigned_vehicle_id": null,
+      "dispatch_time": null,
+      "response_time": null,
+      "completion_time": null
+    },
+    {
+      "id": "I097",
+      "arrival_minute": 36,
+      "x": 56.567529952917184,
+      "y": 20.738031465444507,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V06",
+      "dispatch_time": 70,
+      "response_time": 70.51768318909808,
+      "completion_time": 114.51768318909808
+    },
+    {
+      "id": "I098",
+      "arrival_minute": 13,
+      "x": 30.574891015682848,
+      "y": 46.38805888410247,
+      "priority": 1,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V06",
+      "dispatch_time": 21,
+      "response_time": 48.448259656088695,
+      "completion_time": 69.4482596560887
+    },
+    {
+      "id": "I099",
+      "arrival_minute": 22,
+      "x": 46.48562091156754,
+      "y": 56.945133373364534,
+      "priority": 2,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V20",
+      "dispatch_time": 24,
+      "response_time": 45.23978107250264,
+      "completion_time": 75.23978107250264
+    },
+    {
+      "id": "I100",
+      "arrival_minute": 17,
+      "x": 80.47125818634015,
+      "y": 11.870312124580584,
+      "priority": 3,
+      "status": "ASSIGNED",
+      "assigned_vehicle_id": "V01",
+      "dispatch_time": 17,
+      "response_time": 52.49108966540002,
+      "completion_time": 77.49108966540001
+    }
+  ],
+  "validation_results": {
+    "total_incidents": 100,
+    "assigned_incidents": 56,
+    "waiting_incidents": 44,
+    "invalid_assignment_attempts": 0,
+    "duplicate_assignments": 0,
+    "assignments_to_busy_vehicles": 0,
+    "assignments_before_reveal": 0
+  },
+  "simulation_runtime": 0.16919660568237305,
+  "dispatcher_runtime": 0.0018744468688964844,
+  "metrics_runtime": 0.0003561973571777344,
+  "total_runtime": 0.1924114227294922
+}

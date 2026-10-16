@@ -4055,8 +4055,8 @@
     "assignments_to_busy_vehicles": 0,
     "assignments_before_reveal": 0
   },
-  "simulation_runtime": 0.16352152824401855,
-  "dispatcher_runtime": 0.0020525455474853516,
-  "metrics_runtime": 0.0002963542938232422,
-  "total_runtime": 0.16750311851501465
+  "simulation_runtime": 0.15926265716552734,
+  "dispatcher_runtime": 0.0015053749084472656,
+  "metrics_runtime": 0.0003294944763183594,
+  "total_runtime": 0.18117618560791016
 }

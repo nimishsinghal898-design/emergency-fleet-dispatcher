@@ -1,3 +1,4 @@
+import React from 'react';
 import { Vehicle } from '../types/models';
 import { Card } from './Card';
 
@@ -7,7 +8,7 @@ interface FleetTableProps {
     onSelect: (id: string | null) => void;
 }
 
-export function FleetTable({ vehicles, selectedId, onSelect }: FleetTableProps) {
+export const FleetTable = React.memo(function FleetTable({ vehicles, selectedId, onSelect }: FleetTableProps) {
     return (
         <Card title="Fleet Status" className="h-full flex-1">
             <div className="overflow-y-auto pr-2" style={{ maxHeight: '400px' }}>
@@ -55,4 +56,4 @@ export function FleetTable({ vehicles, selectedId, onSelect }: FleetTableProps) 
             </div>
         </Card>
     );
-}
+});

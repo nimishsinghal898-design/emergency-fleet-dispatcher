@@ -1,12 +1,12 @@
 import { Metrics, ValidationResults } from '../types/models';
-import { Activity, Clock, ShieldAlert, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { Activity, Clock, ShieldAlert, CheckCircle2, AlertTriangle, LucideIcon } from 'lucide-react';
 
 interface KpiCardsProps {
     metrics: Metrics;
     validation: ValidationResults;
 }
 
-function Kpi({ title, value, icon: Icon, subtext, alert = false, tooltip }: { title: string, value: string | number, icon: any, subtext?: string, alert?: boolean, tooltip?: string }) {
+function Kpi({ title, value, icon: Icon, subtext, alert = false, tooltip }: { title: string, value: string | number, icon: LucideIcon, subtext?: string, alert?: boolean, tooltip?: string }) {
     return (
         <div className="bg-slate-900 border border-slate-800 rounded-lg p-4 flex flex-col" title={tooltip}>
             <div className="flex items-start justify-between">

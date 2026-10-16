@@ -1,65 +1,106 @@
 import pytest
 import copy
-from app.simulation import SimulationEngine
+import numpy as np
+from app.simulation import SimulationEngine, ScenarioGenerator
 from app.dispatcher import CoverageAwareDispatcher
+from app.models import Incident, IncidentStatus
 
-def test_dispatcher_causality():
+def test_dispatcher_causality_mutated_future_incidents():
     """
-    Proves that the dispatcher's decision at time t is strictly causal
-    and does not depend on future incidents, future random state, or 
-    pre-generated arrays.
+    Proves that altering future incidents (arriving after t) has strictly ZERO impact
+    on the decisions made up to and including minute t.
     """
+    seed = 20260911
+    checkpoint_t = 12
+
+    # Baseline run
+    eng1 = SimulationEngine(seed=seed, dispatcher=CoverageAwareDispatcher(), num_vehicles=20, num_incidents=100)
+    for _ in range(checkpoint_t + 1):
+        eng1.step()
+    assignments1 = copy.deepcopy(eng1.past_assignments)
+
+    # Perturbed future run
+    eng2 = SimulationEngine(seed=seed, dispatcher=CoverageAwareDispatcher(), num_vehicles=20, num_incidents=100)
     
-    # 1. Run a normal simulation up to minute 10
-    engine1 = SimulationEngine(seed=20260911, dispatcher=CoverageAwareDispatcher(), num_vehicles=20, num_incidents=100)
-    
-    # We step manually until t=10
-    while engine1.t < 10:
-        engine1.step()
-        
-    # At t=10, we record the state and the assignments made so far
-    assignments1_at_10 = copy.deepcopy(engine1.past_assignments)
-    
-    # 2. We will now create a modified engine that shares the EXACT same past up to t=10
-    # But has completely altered future incidents.
-    engine2 = SimulationEngine(seed=20260911, dispatcher=CoverageAwareDispatcher(), num_vehicles=20, num_incidents=100)
-    
-    # Manually tamper with incidents that arrive strictly AFTER t=10
-    for incident in engine2.all_incidents:
-        if incident.arrival_minute > 10:
-            # Change priority, arrival time, and location completely
-            incident.priority = 3 if incident.priority == 1 else 1
-            incident.x = 99
-            incident.y = 99
-            incident.arrival_minute = 119 # Push them all to the end
-            
-    # Now step engine2 up to t=10
-    while engine2.t < 10:
-        engine2.step()
-        
-    assignments2_at_10 = engine2.past_assignments
-    
-    # 3. VERIFY CAUSALITY:
-    # If the dispatcher used future information (like peeking at engine2.incidents),
-    # its decisions might have changed. But because it should only see revealed incidents,
-    # the assignments MUST be identical.
-    
-    assert len(assignments1_at_10) == len(assignments2_at_10), "Number of assignments diverge due to future state change!"
-    
-    for a1, a2 in zip(assignments1_at_10, assignments2_at_10):
+    # Mutate all future incidents arriving strictly after checkpoint_t
+    for inc in eng2.all_incidents:
+        if inc.arrival_minute > checkpoint_t:
+            inc.priority = 3 if inc.priority == 1 else 1
+            inc.x = 99.9
+            inc.y = 99.9
+            inc.arrival_minute = 119
+
+    for _ in range(checkpoint_t + 1):
+        eng2.step()
+    assignments2 = eng2.past_assignments
+
+    assert len(assignments1) == len(assignments2), "Causality violated: assignment count changed based on future!"
+    for a1, a2 in zip(assignments1, assignments2):
+        assert a1.assignment_id == a2.assignment_id
         assert a1.incident_id == a2.incident_id
         assert a1.vehicle_id == a2.vehicle_id
         assert a1.dispatch_time == a2.dispatch_time
-        
-    # Further, let's step to minute 10 itself to see if the current minute's assignment is identical
-    engine1.step()
-    engine2.step()
-    
-    # The assignments made EXACTLY at minute 10 must also be identical, 
-    # because the future (minute 11+) is different but minute 10 is the same.
-    assert len(engine1.past_assignments) == len(engine2.past_assignments)
-    for a1, a2 in zip(engine1.past_assignments, engine2.past_assignments):
+        assert a1.response_time == a2.response_time
+
+def test_dispatcher_causality_added_future_incidents():
+    """
+    Adding 50 synthetic future incidents arriving after t=10 must not alter
+    any decisions made up to minute 10.
+    """
+    seed = 42
+    checkpoint_t = 10
+
+    eng1 = SimulationEngine(seed=seed, dispatcher=CoverageAwareDispatcher(), num_vehicles=20, num_incidents=100)
+    for _ in range(checkpoint_t + 1):
+        eng1.step()
+    assignments1 = copy.deepcopy(eng1.past_assignments)
+
+    eng2 = SimulationEngine(seed=seed, dispatcher=CoverageAwareDispatcher(), num_vehicles=20, num_incidents=100)
+    # Inject 50 new high-priority future incidents arriving at t=15
+    for i in range(50):
+        eng2.all_incidents.append(Incident(
+            id=f"FUTURE_{i:03d}",
+            arrival_minute=15,
+            x=10.0,
+            y=10.0,
+            priority=3,
+            status=IncidentStatus.WAITING
+        ))
+
+    for _ in range(checkpoint_t + 1):
+        eng2.step()
+    assignments2 = eng2.past_assignments
+
+    assert len(assignments1) == len(assignments2)
+    for a1, a2 in zip(assignments1, assignments2):
         assert a1.incident_id == a2.incident_id
         assert a1.vehicle_id == a2.vehicle_id
-        assert a1.dispatch_time == a2.dispatch_time
 
+def test_dispatcher_causality_multiple_checkpoints():
+    """
+    Verify causality holds invariant across multiple distinct time horizons: t=5, t=15, t=25.
+    """
+    for checkpoint in [5, 15, 25]:
+        eng_orig = SimulationEngine(seed=999, dispatcher=CoverageAwareDispatcher(), num_vehicles=20, num_incidents=100)
+        for _ in range(checkpoint + 1):
+            eng_orig.step()
+        orig_assignments = copy.deepcopy(eng_orig.past_assignments)
+
+        eng_mod = SimulationEngine(seed=999, dispatcher=CoverageAwareDispatcher(), num_vehicles=20, num_incidents=100)
+        # Randomly shuffle future incident priorities
+        rng = np.random.default_rng(12345)
+        for inc in eng_mod.all_incidents:
+            if inc.arrival_minute > checkpoint:
+                inc.priority = int(rng.choice([1, 2, 3]))
+                inc.x = float(rng.uniform(0, 100))
+                inc.y = float(rng.uniform(0, 100))
+
+        for _ in range(checkpoint + 1):
+            eng_mod.step()
+        mod_assignments = eng_mod.past_assignments
+
+        assert len(orig_assignments) == len(mod_assignments), f"Failed causality at checkpoint t={checkpoint}"
+        for a1, a2 in zip(orig_assignments, mod_assignments):
+            assert a1.incident_id == a2.incident_id
+            assert a1.vehicle_id == a2.vehicle_id
+            assert a1.dispatch_time == a2.dispatch_time

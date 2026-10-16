@@ -1,3 +1,4 @@
+import React from 'react';
 import { Assignment } from '../types/models';
 import { Card } from './Card';
 import { FileText } from 'lucide-react';
@@ -7,7 +8,7 @@ interface AssignmentPanelProps {
     currentMinute: number;
 }
 
-export function AssignmentPanel({ assignments, currentMinute }: AssignmentPanelProps) {
+export const AssignmentPanel = React.memo(function AssignmentPanel({ assignments, currentMinute }: AssignmentPanelProps) {
     // Show assignments that have been dispatched by currentMinute
     // Reverse sort by dispatch time to show newest first
     const visible = assignments
@@ -57,4 +58,4 @@ export function AssignmentPanel({ assignments, currentMinute }: AssignmentPanelP
             </div>
         </Card>
     );
-}
+});

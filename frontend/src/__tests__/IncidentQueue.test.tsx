@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { IncidentQueue } from '../components/IncidentQueue';
+import { Incident } from '../types/models';
 import { expect, test } from 'vitest';
 
 test('IncidentQueue shows NO INCIDENTS WAITING when empty', () => {
@@ -8,10 +9,10 @@ test('IncidentQueue shows NO INCIDENTS WAITING when empty', () => {
 });
 
 test('IncidentQueue sorts incidents correctly (P3 > P2 > P1, then Arrival Asc)', () => {
-    const mockIncidents: any[] = [
-        { id: '1', priority: 1, arrival_minute: 0, status: 'WAITING', x: 10, y: 10, dispatch_time: null, assigned_vehicle_id: null, response_time: null },
-        { id: '2', priority: 3, arrival_minute: 5, status: 'WAITING', x: 20, y: 20, dispatch_time: null, assigned_vehicle_id: null, response_time: null },
-        { id: '3', priority: 3, arrival_minute: 2, status: 'WAITING', x: 30, y: 30, dispatch_time: null, assigned_vehicle_id: null, response_time: null }
+    const mockIncidents: Incident[] = [
+        { id: '1', priority: 1, arrival_minute: 0, status: 'WAITING', x: 10, y: 10, dispatch_time: null, assigned_vehicle_id: null, response_time: null, completion_time: null },
+        { id: '2', priority: 3, arrival_minute: 5, status: 'WAITING', x: 20, y: 20, dispatch_time: null, assigned_vehicle_id: null, response_time: null, completion_time: null },
+        { id: '3', priority: 3, arrival_minute: 2, status: 'WAITING', x: 30, y: 30, dispatch_time: null, assigned_vehicle_id: null, response_time: null, completion_time: null }
     ];
 
     render(<IncidentQueue incidents={mockIncidents} />);

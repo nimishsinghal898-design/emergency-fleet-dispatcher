@@ -6,7 +6,7 @@ import { expect, test, vi } from 'vitest';
 vi.mock('../api/client', () => {
     return {
         api: {
-            runSimulation: vi.fn().mockResolvedValue({ run_id: 'mock-123' }),
+            runSimulation: vi.fn().mockReturnValue(new Promise(() => {})),
             getRun: vi.fn().mockResolvedValue({
                 run_id: 'mock-123',
                 metrics: {
@@ -29,14 +29,14 @@ vi.mock('../api/client', () => {
 
 test('renders App and shows loading state when submitting form', () => {
     render(<App />);
-    const runBtn = screen.getByText(/RUN SIMULATION/i);
+    const runBtn = screen.getByText(/EXECUTE SIMULATION/i);
     expect(runBtn).toBeInTheDocument();
     
-    // Fire click
-    fireEvent.click(runBtn);
+    // Fire submit on form
+    fireEvent.submit(runBtn.closest('form')!);
     
     // Expect loading text/state
-    expect(screen.getByText(/Running/i)).toBeInTheDocument();
+    expect(screen.getByText(/EXECUTING SIMULATION/i)).toBeInTheDocument();
 });
 
 test('IncidentQueue shows NO INCIDENTS WAITING when empty', () => {

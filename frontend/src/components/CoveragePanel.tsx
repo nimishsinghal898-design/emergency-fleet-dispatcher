@@ -1,3 +1,4 @@
+import React from 'react';
 import { CoverageRecord } from '../types/models';
 import { Card } from './Card';
 import { ShieldCheck, ShieldAlert } from 'lucide-react';
@@ -28,7 +29,7 @@ function QuadrantView({ idles, code }: { idles: number, code: string }) {
     );
 }
 
-export function CoveragePanel({ record }: CoveragePanelProps) {
+export const CoveragePanel = React.memo(function CoveragePanel({ record }: CoveragePanelProps) {
     if (!record) {
         return (
             <Card title="Coverage Status">
@@ -56,4 +57,4 @@ export function CoveragePanel({ record }: CoveragePanelProps) {
             </div>
         </Card>
     );
-}
+});

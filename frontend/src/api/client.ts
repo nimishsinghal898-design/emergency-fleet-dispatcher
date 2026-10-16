@@ -5,10 +5,12 @@ import {
     Vehicle, 
     Incident, 
     Assignment, 
-    CoverageRecord
+    CoverageRecord,
+    TimelineEvent,
+    MetricsResponse
 } from '../types/models';
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || (typeof window !== 'undefined' && (window.location.port === '8000' || !window.location.port) ? '' : 'http://127.0.0.1:8000');
 
 class ApiError extends Error {
     constructor(public status: number, message: string) {
@@ -55,8 +57,8 @@ export const api = {
         return fetchJson<RunResult>(`/api/simulations/${runId}`);
     },
 
-    async getTimeline(runId: string): Promise<any[]> {
-        return fetchJson<any[]>(`/api/simulations/${runId}/timeline`);
+    async getTimeline(runId: string): Promise<TimelineEvent[]> {
+        return fetchJson<TimelineEvent[]>(`/api/simulations/${runId}/timeline`);
     },
 
     async getVehicles(runId: string): Promise<Vehicle[]> {
@@ -71,8 +73,8 @@ export const api = {
         return fetchJson<Assignment[]>(`/api/simulations/${runId}/assignments`);
     },
 
-    async getMetrics(runId: string): Promise<any> {
-        return fetchJson<any>(`/api/simulations/${runId}/metrics`);
+    async getMetrics(runId: string): Promise<MetricsResponse> {
+        return fetchJson<MetricsResponse>(`/api/simulations/${runId}/metrics`);
     },
 
     async getCoverage(runId: string): Promise<CoverageRecord[]> {

@@ -35,7 +35,7 @@ export function SimulationControls({ onRun, onRunComparison, isLoading }: Simula
                         <label className="block text-xs font-medium text-slate-400 mb-1">Dispatcher Policy</label>
                         <select 
                             value={dispatcher} 
-                            onChange={e => setDispatcher(e.target.value as any)}
+                            onChange={e => setDispatcher(e.target.value as 'coverage' | 'baseline')}
                             className="w-full bg-slate-950 border border-slate-700 rounded p-2 text-sm text-slate-200 outline-none focus:border-blue-500"
                         >
                             <option value="coverage">Coverage-Preserving (Phase 1)</option>

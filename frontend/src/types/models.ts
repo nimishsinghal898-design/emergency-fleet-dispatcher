@@ -114,3 +114,21 @@ export interface SimulationResponse {
     run_id: string;
     message: string;
 }
+
+export interface TimelineEvent {
+    type: 'assignment' | 'coverage';
+    time: number;
+    data: Assignment | CoverageRecord;
+}
+
+export interface MetricsResponse {
+    metrics: Metrics;
+    validation_results: ValidationResults;
+    scenario_summary: ScenarioSummary;
+    runtime: {
+        simulation: number;
+        dispatcher: number;
+        metrics: number;
+        total: number;
+    };
+}

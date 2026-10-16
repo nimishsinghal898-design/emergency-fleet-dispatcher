@@ -2,7 +2,7 @@ import time
 import uuid
 import csv
 import io
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Path
 from fastapi.responses import Response
 
 from app.api_models import SimulationRequest, SimulationResponse
@@ -12,6 +12,8 @@ from app.dispatcher import CoverageAwareDispatcher
 from app.metrics import build_run_result
 
 router = APIRouter(prefix="/api", tags=["simulation"])
+
+RUN_ID_REGEX = r"^[a-zA-Z0-9\-_]{1,64}$"
 
 @router.get("/health")
 def health_check():
@@ -50,20 +52,19 @@ def run_simulation(req: SimulationRequest):
     )
 
 @router.get("/simulations/{run_id}")
-def get_simulation(run_id: str):
+def get_simulation(run_id: str = Path(..., pattern=RUN_ID_REGEX)):
     result = store.get(run_id)
     if not result:
         raise HTTPException(status_code=404, detail="Simulation run not found")
     return result
 
 @router.get("/simulations/{run_id}/timeline")
-def get_timeline(run_id: str):
+def get_timeline(run_id: str = Path(..., pattern=RUN_ID_REGEX)):
     result = store.get(run_id)
     if not result:
         raise HTTPException(status_code=404, detail="Simulation run not found")
     
     # Combine assignments and coverage records into a timeline
-    # A robust frontend might prefer them separated, but a timeline implies sorted chronological events
     events = []
     for a in result.assignments:
         events.append({"type": "assignment", "time": a.dispatch_time, "data": a})
@@ -74,27 +75,31 @@ def get_timeline(run_id: str):
     return events
 
 @router.get("/simulations/{run_id}/vehicles")
-def get_vehicles(run_id: str):
+def get_vehicles(run_id: str = Path(..., pattern=RUN_ID_REGEX)):
     result = store.get(run_id)
-    if not result: raise HTTPException(status_code=404)
+    if not result:
+        raise HTTPException(status_code=404, detail="Simulation run not found")
     return result.vehicles
 
 @router.get("/simulations/{run_id}/incidents")
-def get_incidents(run_id: str):
+def get_incidents(run_id: str = Path(..., pattern=RUN_ID_REGEX)):
     result = store.get(run_id)
-    if not result: raise HTTPException(status_code=404)
+    if not result:
+        raise HTTPException(status_code=404, detail="Simulation run not found")
     return result.incidents
 
 @router.get("/simulations/{run_id}/assignments")
-def get_assignments(run_id: str):
+def get_assignments(run_id: str = Path(..., pattern=RUN_ID_REGEX)):
     result = store.get(run_id)
-    if not result: raise HTTPException(status_code=404)
+    if not result:
+        raise HTTPException(status_code=404, detail="Simulation run not found")
     return result.assignments
 
 @router.get("/simulations/{run_id}/metrics")
-def get_metrics(run_id: str):
+def get_metrics(run_id: str = Path(..., pattern=RUN_ID_REGEX)):
     result = store.get(run_id)
-    if not result: raise HTTPException(status_code=404)
+    if not result:
+        raise HTTPException(status_code=404, detail="Simulation run not found")
     return {
         "metrics": result.metrics,
         "validation_results": result.validation_results,
@@ -108,29 +113,32 @@ def get_metrics(run_id: str):
     }
 
 @router.get("/simulations/{run_id}/coverage")
-def get_coverage(run_id: str):
+def get_coverage(run_id: str = Path(..., pattern=RUN_ID_REGEX)):
     result = store.get(run_id)
-    if not result: raise HTTPException(status_code=404)
+    if not result:
+        raise HTTPException(status_code=404, detail="Simulation run not found")
     return result.coverage_timeline
 
 @router.get("/simulations/{run_id}/export/json")
-def export_json(run_id: str):
+def export_json(run_id: str = Path(..., pattern=RUN_ID_REGEX)):
     result = store.get(run_id)
-    if not result: raise HTTPException(status_code=404)
+    if not result:
+        raise HTTPException(status_code=404, detail="Simulation run not found")
     
     content = result.model_dump_json(indent=2)
     return Response(content=content, media_type="application/json")
 
 @router.get("/simulations/{run_id}/export/csv")
-def export_csv(run_id: str):
+def export_csv(run_id: str = Path(..., pattern=RUN_ID_REGEX)):
     result = store.get(run_id)
-    if not result: raise HTTPException(status_code=404)
+    if not result:
+        raise HTTPException(status_code=404, detail="Simulation run not found")
     
     flat_metrics = {
         "seed": result.seed,
-        **result.scenario_summary.model_dump(),
-        **result.validation_results.model_dump(),
-        **result.metrics.model_dump(),
+        **result.scenario_summary.model_dump(mode="json"),
+        **result.validation_results.model_dump(mode="json"),
+        **result.metrics.model_dump(mode="json"),
         "simulation_runtime": result.simulation_runtime,
         "dispatcher_runtime": result.dispatcher_runtime,
         "metrics_runtime": result.metrics_runtime,
@@ -138,7 +146,7 @@ def export_csv(run_id: str):
     }
     
     output = io.StringIO()
-    writer = csv.DictWriter(output, fieldnames=flat_metrics.keys())
+    writer = csv.DictWriter(output, fieldnames=list(flat_metrics.keys()))
     writer.writeheader()
     writer.writerow(flat_metrics)
     
