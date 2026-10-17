@@ -67,3 +67,26 @@ def test_experimental_mode_constraints():
 def test_invalid_run_id():
     response = client.get("/api/simulations/invalid-uuid-1234")
     assert response.status_code == 404
+
+def test_cors_headers_localhost():
+    headers = {"Origin": "http://localhost:5173"}
+    resp = client.get("/api/health", headers=headers)
+    assert resp.status_code == 200
+    assert resp.headers.get("access-control-allow-origin") == "http://localhost:5173"
+
+def test_cors_headers_vercel_domain():
+    headers = {"Origin": "https://emergency-fleet-dispatcher.vercel.app"}
+    resp = client.get("/api/health", headers=headers)
+    assert resp.status_code == 200
+    assert resp.headers.get("access-control-allow-origin") == "https://emergency-fleet-dispatcher.vercel.app"
+
+def test_cors_preflight_options():
+    headers = {
+        "Origin": "https://emergency-fleet-dispatcher.vercel.app",
+        "Access-Control-Request-Method": "POST",
+        "Access-Control-Request-Headers": "content-type"
+    }
+    resp = client.options("/api/simulations", headers=headers)
+    assert resp.status_code == 200
+    assert resp.headers.get("access-control-allow-origin") == "https://emergency-fleet-dispatcher.vercel.app"
+

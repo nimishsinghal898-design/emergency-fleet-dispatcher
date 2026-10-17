@@ -10,7 +10,20 @@ import {
     MetricsResponse
 } from '../types/models';
 
-const API_BASE = import.meta.env.VITE_API_BASE_URL || (typeof window !== 'undefined' && (window.location.port === '8000' || !window.location.port) ? '' : 'http://127.0.0.1:8000');
+function getApiBaseUrl(): string {
+    const envUrl = import.meta.env.VITE_API_BASE_URL;
+    if (envUrl && typeof envUrl === 'string' && envUrl.trim() !== '') {
+        return envUrl.trim().replace(/\/+$/, '');
+    }
+    // If frontend is co-located with backend on port 8000
+    if (typeof window !== 'undefined' && window.location.port === '8000') {
+        return '';
+    }
+    // Default fallback for local development
+    return 'http://127.0.0.1:8000';
+}
+
+const API_BASE = getApiBaseUrl();
 
 class ApiError extends Error {
     constructor(public status: number, message: string) {
@@ -20,13 +33,20 @@ class ApiError extends Error {
 }
 
 async function fetchJson<T>(url: string, options?: RequestInit): Promise<T> {
-    const response = await fetch(`${API_BASE}${url}`, {
-        ...options,
-        headers: {
-            'Content-Type': 'application/json',
-            ...(options?.headers || {})
-        }
-    });
+    const targetUrl = `${API_BASE}${url}`;
+    let response: Response;
+    try {
+        response = await fetch(targetUrl, {
+            ...options,
+            headers: {
+                'Content-Type': 'application/json',
+                ...(options?.headers || {})
+            }
+        });
+    } catch (networkErr: unknown) {
+        const errorMsg = networkErr instanceof Error ? networkErr.message : 'Network error';
+        throw new ApiError(0, `Network error connecting to API (${targetUrl}): ${errorMsg}`);
+    }
 
     if (!response.ok) {
         let msg = 'Failed to fetch API';
@@ -34,7 +54,8 @@ async function fetchJson<T>(url: string, options?: RequestInit): Promise<T> {
             const errBody = await response.json();
             msg = errBody.detail || msg;
         } catch {
-            // Ignore parse errors on error responses
+            // Provide informative message when server returns non-JSON (e.g. 404/502 HTML)
+            msg = `Failed to fetch API (HTTP ${response.status} from ${targetUrl})`;
         }
         throw new ApiError(response.status, msg);
     }
