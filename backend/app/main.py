@@ -1,11 +1,12 @@
 import logging
 import os
-from fastapi import FastAPI, Request, HTTPException
-from starlette.exceptions import HTTPException as StarletteHTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse, FileResponse
-from fastapi.staticfiles import StaticFiles
+
 from app.api.router import router
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
+from starlette.exceptions import HTTPException as StarletteHTTPException
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
@@ -65,7 +66,7 @@ async def http_exception_handler(request: Request, exc: StarletteHTTPException):
 # Global safe error handler (prevents stack trace leaks for unhandled exceptions)
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception):
-    logger.error(f"Unhandled exception: {str(exc)}", exc_info=True)
+    logger.error("Unhandled exception: %s", exc, exc_info=exc)
     return JSONResponse(
         status_code=500,
         content={"detail": "Internal Server Error. Please check backend logs."}

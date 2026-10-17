@@ -6,10 +6,11 @@ from pathlib import Path
 # Need to ensure backend is in sys.path if run directly
 sys.path.insert(0, str(Path(__file__).parent))
 
-from app.simulation import SimulationEngine, BaselineDispatcher
 from app.dispatcher import CoverageAwareDispatcher
-from app.metrics import build_run_result
 from app.export import export_run_result
+from app.metrics import build_run_result
+from app.simulation import BaselineDispatcher, SimulationEngine
+
 
 def main():
     parser = argparse.ArgumentParser(description="Run Emergency Fleet Simulation")
@@ -33,7 +34,7 @@ def main():
     total_time = time.time() - t0
     run_result = build_run_result(engine, total_runtime=total_time)
     
-    print(f"Metrics summary:")
+    print("Metrics summary:")
     print(f"  Assigned: {run_result.validation_results.assigned_incidents}/{run_result.scenario_summary.total_incidents}")
     print(f"  Weighted Mean Response: {run_result.metrics.weighted_response_mean:.2f}")
     print(f"  Total Outage Minutes: {run_result.metrics.total_outage_minutes}")

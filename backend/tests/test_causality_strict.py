@@ -1,9 +1,10 @@
-import pytest
 import copy
+
 import numpy as np
-from app.simulation import SimulationEngine, ScenarioGenerator
 from app.dispatcher import CoverageAwareDispatcher
 from app.models import Incident, IncidentStatus
+from app.simulation import SimulationEngine
+
 
 def test_dispatcher_causality_mutated_future_incidents():
     """

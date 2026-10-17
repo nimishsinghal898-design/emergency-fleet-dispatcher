@@ -1,7 +1,8 @@
 from enum import Enum
+
 # pyrefly: ignore [missing-import]
 from pydantic import BaseModel
-from typing import Optional, List, Dict
+
 
 class Quadrant(str, Enum):
     LOWER_LEFT = "LOWER_LEFT"
@@ -23,8 +24,8 @@ class Vehicle(BaseModel):
     x: float
     y: float
     status: VehicleStatus = VehicleStatus.IDLE
-    current_incident_id: Optional[str] = None
-    completion_time: Optional[float] = None
+    current_incident_id: str | None = None
+    completion_time: float | None = None
 
     def get_quadrant(self) -> Quadrant:
         if self.x < 50 and self.y < 50:
@@ -43,10 +44,10 @@ class Incident(BaseModel):
     y: float
     priority: int
     status: IncidentStatus = IncidentStatus.WAITING
-    assigned_vehicle_id: Optional[str] = None
-    dispatch_time: Optional[int] = None
-    response_time: Optional[float] = None
-    completion_time: Optional[float] = None
+    assigned_vehicle_id: str | None = None
+    dispatch_time: int | None = None
+    response_time: float | None = None
+    completion_time: float | None = None
 
 class Assignment(BaseModel):
     assignment_id: str
@@ -63,8 +64,8 @@ class Assignment(BaseModel):
     arrival_time: float
     completion_time: float
     vehicle_quadrant_before: Quadrant
-    idle_counts_before: Dict[Quadrant, int]
-    idle_counts_after: Dict[Quadrant, int]
+    idle_counts_before: dict[Quadrant, int]
+    idle_counts_after: dict[Quadrant, int]
 
 class CoverageRecord(BaseModel):
     minute: int
@@ -78,10 +79,10 @@ class CoverageRecord(BaseModel):
 class Metrics(BaseModel):
     weighted_response_sum: float = 0.0
     weighted_response_mean: float = 0.0
-    p3_mean_response: Optional[float] = None
-    p3_median_response: Optional[float] = None
-    p3_max_response: Optional[float] = None
-    p3_min_response: Optional[float] = None
+    p3_mean_response: float | None = None
+    p3_median_response: float | None = None
+    p3_max_response: float | None = None
+    p3_min_response: float | None = None
     p3_count: int = 0
     total_outage_minutes: int = 0
     outage_minutes_LL: int = 0
@@ -108,11 +109,11 @@ class ValidationResults(BaseModel):
 class RunResult(BaseModel):
     seed: int
     scenario_summary: ScenarioSummary
-    assignments: List[Assignment]
+    assignments: list[Assignment]
     metrics: Metrics
-    coverage_timeline: List[CoverageRecord]
-    vehicles: List[Vehicle]
-    incidents: List[Incident]
+    coverage_timeline: list[CoverageRecord]
+    vehicles: list[Vehicle]
+    incidents: list[Incident]
     validation_results: ValidationResults
     simulation_runtime: float
     dispatcher_runtime: float
@@ -121,8 +122,8 @@ class RunResult(BaseModel):
 
 class SimulationState(BaseModel):
     t: int
-    vehicles: List[Vehicle]
-    waiting_incidents: List[Incident]
-    revealed_incidents: List[Incident] # Includes waiting, assigned, completed
-    past_assignments: List[Assignment]
-    coverage_records: List[CoverageRecord]
+    vehicles: list[Vehicle]
+    waiting_incidents: list[Incident]
+    revealed_incidents: list[Incident] # Includes waiting, assigned, completed
+    past_assignments: list[Assignment]
+    coverage_records: list[CoverageRecord]

@@ -5,8 +5,9 @@ from pathlib import Path
 # Add backend directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from app.simulation import ScenarioGenerator, SimulationEngine, BaselineDispatcher
-from app.models import Quadrant, VehicleStatus, IncidentStatus
+from app.models import IncidentStatus, Quadrant, VehicleStatus
+from app.simulation import BaselineDispatcher, ScenarioGenerator, SimulationEngine
+
 
 def test_same_seed_identical_scenario():
     vehicles1, incidents1 = ScenarioGenerator.generate_scenario(20260911)
@@ -20,7 +21,7 @@ def test_different_seeds_different_scenario():
     vehicles2, incidents2 = ScenarioGenerator.generate_scenario(20260912)
     
     assert [v.model_dump() for v in vehicles1] != [v.model_dump() for v in vehicles2]
-    # Same goes for incidents usually, though technically there's a miniscule chance they match, practically they won't.
+    assert [i.model_dump() for i in incidents1] != [i.model_dump() for i in incidents2]
 
 def test_counts_and_distributions():
     vehicles, incidents = ScenarioGenerator.generate_scenario(20260911)
@@ -33,7 +34,7 @@ def test_counts_and_distributions():
     for v in vehicles:
         quad_counts[v.get_quadrant()] += 1
         
-    for q, count in quad_counts.items():
+    for count in quad_counts.values():
         assert count == 5
         
     # Priorities
@@ -64,7 +65,7 @@ def test_quadrant_classification():
 
 def test_euclidean_distance_and_8min_completion():
     # Setup custom scenario for a deterministic micro-test
-    from app.models import Vehicle, Incident
+    from app.models import Incident, Vehicle
     
     v1 = Vehicle(id="V01", x=0, y=0, status=VehicleStatus.IDLE)
     i1 = Incident(id="I001", arrival_minute=0, x=3, y=4, priority=1, status=IncidentStatus.WAITING)

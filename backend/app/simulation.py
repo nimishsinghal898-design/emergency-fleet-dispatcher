@@ -1,16 +1,23 @@
 # pyrefly: ignore [missing-import]
-import numpy as np
 import math
 import time
-from typing import List, Dict, Tuple
+
+import numpy as np
 from app.models import (
-    Vehicle, Incident, Assignment, SimulationState, 
-    Quadrant, VehicleStatus, IncidentStatus, CoverageRecord
+    Assignment,
+    CoverageRecord,
+    Incident,
+    IncidentStatus,
+    Quadrant,
+    SimulationState,
+    Vehicle,
+    VehicleStatus,
 )
+
 
 class ScenarioGenerator:
     @staticmethod
-    def generate_scenario(seed: int = 20260911, num_vehicles: int = 20, num_incidents: int = 100) -> Tuple[List[Vehicle], List[Incident]]:
+    def generate_scenario(seed: int = 20260911, num_vehicles: int = 20, num_incidents: int = 100) -> tuple[list[Vehicle], list[Incident]]:
         rng = np.random.Generator(np.random.PCG64(seed))
         
         vehicles = []
@@ -67,7 +74,7 @@ class ScenarioGenerator:
         return vehicles, incidents
 
 class DispatcherInterface:
-    def assign(self, state: SimulationState) -> List[Tuple[str, str]]:
+    def assign(self, state: SimulationState) -> list[tuple[str, str]]:
         """
         Must return a list of (incident_id, vehicle_id) assignments.
         """
@@ -77,7 +84,7 @@ class BaselineDispatcher(DispatcherInterface):
     """
     Nearest Idle Vehicle baseline dispatcher for testing.
     """
-    def assign(self, state: SimulationState) -> List[Tuple[str, str]]:
+    def assign(self, state: SimulationState) -> list[tuple[str, str]]:
         assignments = []
         assigned_vehicles = set()
         
@@ -90,8 +97,8 @@ class BaselineDispatcher(DispatcherInterface):
                 break # No more vehicles available
             
             # Tie breaking: distance, then vehicle ID
-            def sort_key(v):
-                dist = math.sqrt((v.x - incident.x)**2 + (v.y - incident.y)**2)
+            def sort_key(v, inc=incident):
+                dist = math.sqrt((v.x - inc.x)**2 + (v.y - inc.y)**2)
                 return (dist, v.id)
                 
             idle_vehicles.sort(key=sort_key)
@@ -109,9 +116,9 @@ class SimulationEngine:
         self.dispatcher = dispatcher or BaselineDispatcher()
         
         self.t = 0
-        self.revealed_incidents: List[Incident] = []
-        self.past_assignments: List[Assignment] = []
-        self.coverage_records: List[CoverageRecord] = []
+        self.revealed_incidents: list[Incident] = []
+        self.past_assignments: list[Assignment] = []
+        self.coverage_records: list[CoverageRecord] = []
         
         self.invalid_assignment_attempts = 0
         self.duplicate_assignments = 0
@@ -120,7 +127,7 @@ class SimulationEngine:
         
         self.dispatcher_time_sum = 0.0
         
-    def _get_waiting_incidents(self) -> List[Incident]:
+    def _get_waiting_incidents(self) -> list[Incident]:
         waiting = [i for i in self.revealed_incidents if i.status == IncidentStatus.WAITING]
         # Sort by: priority desc, arrival_time asc, incident_id asc
         waiting.sort(key=lambda i: (-i.priority, i.arrival_minute, i.id))
@@ -135,17 +142,17 @@ class SimulationEngine:
         outage = 1 if any(c == 0 for c in idle_counts.values()) else 0
         healthy = outage == 0
         
-        return CoverageRecord(
+        return CoverageRecord.model_construct(
             minute=self.t,
             idle_LL=idle_counts[Quadrant.LOWER_LEFT],
             idle_UL=idle_counts[Quadrant.UPPER_LEFT],
             idle_LR=idle_counts[Quadrant.LOWER_RIGHT],
             idle_UR=idle_counts[Quadrant.UPPER_RIGHT],
             coverage_healthy=healthy,
-            outage=outage
+            outage=outage,
         )
         
-    def _get_idle_counts(self) -> Dict[Quadrant, int]:
+    def _get_idle_counts(self) -> dict[Quadrant, int]:
         counts = {q: 0 for q in Quadrant}
         for v in self.vehicles:
             if v.status == VehicleStatus.IDLE:
@@ -160,116 +167,116 @@ class SimulationEngine:
 
     def step(self):
         # A. Process vehicle completions where completion_time <= t
-            for v in self.vehicles:
-                if v.status == VehicleStatus.BUSY and v.completion_time is not None and v.completion_time <= self.t:
-                    v.status = VehicleStatus.IDLE
-                    v.current_incident_id = None
-                    v.completion_time = None
-                    
-            # B. Reveal incidents arriving at t in ascending incident ID
-            arriving_now = [i for i in self.all_incidents if i.arrival_minute == self.t]
-            arriving_now.sort(key=lambda i: i.id)
-            self.revealed_incidents.extend(arriving_now)
+        for v in self.vehicles:
+            if v.status == VehicleStatus.BUSY and v.completion_time is not None and v.completion_time <= self.t:
+                v.status = VehicleStatus.IDLE
+                v.current_incident_id = None
+                v.completion_time = None
+                
+        # B. Reveal incidents arriving at t in ascending incident ID
+        arriving_now = [i for i in self.all_incidents if i.arrival_minute == self.t]
+        arriving_now.sort(key=lambda i: i.id)
+        self.revealed_incidents.extend(arriving_now)
+        
+        # C. Process waiting incidents
+        waiting_incidents = self._get_waiting_incidents()
+        
+        # Create a safe snapshot for the dispatcher (Causal constraint)
+        # Copying necessary state to prevent accidental mutation or lookahead
+        state_snapshot = SimulationState.model_construct(
+            t=self.t,
+            vehicles=[v.model_copy() for v in self.vehicles],
+            waiting_incidents=[i.model_copy() for i in waiting_incidents],
+            revealed_incidents=[i.model_copy() for i in self.revealed_incidents],
+            past_assignments=list(self.past_assignments),
+            coverage_records=list(self.coverage_records),
+        )
+        
+        t_disp_start = time.time()
+        assignments = self.dispatcher.assign(state_snapshot)
+        self.dispatcher_time_sum += (time.time() - t_disp_start)
+        
+        # D. Apply assignments
+        assigned_this_minute_incidents = set()
+        assigned_this_minute_vehicles = set()
+        
+        for inc_id, veh_id in assignments:
+            # Validation checks
+            incident = next((i for i in self.revealed_incidents if i.id == inc_id), None)
+            vehicle = next((v for v in self.vehicles if v.id == veh_id), None)
             
-            # C. Process waiting incidents
-            waiting_incidents = self._get_waiting_incidents()
+            if not incident or not vehicle:
+                self.invalid_assignment_attempts += 1
+                continue
+                
+            if incident.arrival_minute > self.t:
+                self.assignments_before_reveal += 1
+                continue
+                
+            if incident.status != IncidentStatus.WAITING:
+                self.invalid_assignment_attempts += 1
+                continue
+                
+            if incident.id in assigned_this_minute_incidents or vehicle.id in assigned_this_minute_vehicles:
+                self.duplicate_assignments += 1
+                continue
+                
+            if vehicle.status != VehicleStatus.IDLE:
+                self.assignments_to_busy_vehicles += 1
+                continue
+                
+            # Valid assignment
+            assigned_this_minute_incidents.add(incident.id)
+            assigned_this_minute_vehicles.add(vehicle.id)
             
-            # Create a safe snapshot for the dispatcher (Causal constraint)
-            # Deep copying necessary state to prevent accidental mutation or lookahead
-            state_snapshot = SimulationState(
-                t=self.t,
-                vehicles=[Vehicle(**v.model_dump()) for v in self.vehicles],
-                waiting_incidents=[Incident(**i.model_dump()) for i in waiting_incidents],
-                revealed_incidents=[Incident(**i.model_dump()) for i in self.revealed_incidents],
-                past_assignments=[Assignment(**a.model_dump()) for a in self.past_assignments],
-                coverage_records=[CoverageRecord(**c.model_dump()) for c in self.coverage_records]
+            idle_counts_before = self._get_idle_counts()
+            quadrant_before = vehicle.get_quadrant()
+            vehicle_x_before = vehicle.x
+            vehicle_y_before = vehicle.y
+            
+            dist = math.sqrt((vehicle.x - incident.x)**2 + (vehicle.y - incident.y)**2)
+            travel_time = dist # Speed is 1 unit/min
+            
+            vehicle.status = VehicleStatus.BUSY
+            vehicle.current_incident_id = incident.id
+            vehicle.x = incident.x
+            vehicle.y = incident.y
+            
+            arrival_time = self.t + travel_time
+            completion_time = arrival_time + 8
+            vehicle.completion_time = completion_time
+            
+            incident.status = IncidentStatus.ASSIGNED
+            incident.assigned_vehicle_id = vehicle.id
+            incident.dispatch_time = self.t
+            incident.response_time = (self.t - incident.arrival_minute) + travel_time
+            incident.completion_time = completion_time
+            
+            # We need to temporarily evaluate idle counts after this single assignment
+            idle_counts_after = self._get_idle_counts()
+            
+            assignment_record = Assignment.model_construct(
+                assignment_id=f"A{len(self.past_assignments)+1:04d}",
+                incident_id=incident.id,
+                vehicle_id=vehicle.id,
+                priority=incident.priority,
+                dispatch_time=self.t,
+                vehicle_x_before=vehicle_x_before,
+                vehicle_y_before=vehicle_y_before,
+                incident_x=incident.x,
+                incident_y=incident.y,
+                distance=dist,
+                response_time=incident.response_time,
+                arrival_time=arrival_time,
+                completion_time=completion_time,
+                vehicle_quadrant_before=quadrant_before,
+                idle_counts_before=idle_counts_before,
+                idle_counts_after=idle_counts_after,
             )
-            
-            t_disp_start = time.time()
-            assignments = self.dispatcher.assign(state_snapshot)
-            self.dispatcher_time_sum += (time.time() - t_disp_start)
-            
-            # D. Apply assignments
-            assigned_this_minute_incidents = set()
-            assigned_this_minute_vehicles = set()
-            
-            for inc_id, veh_id in assignments:
-                # Validation checks
-                incident = next((i for i in self.revealed_incidents if i.id == inc_id), None)
-                vehicle = next((v for v in self.vehicles if v.id == veh_id), None)
+            self.past_assignments.append(assignment_record)
                 
-                if not incident or not vehicle:
-                    self.invalid_assignment_attempts += 1
-                    continue
-                    
-                if incident.arrival_minute > self.t:
-                    self.assignments_before_reveal += 1
-                    continue
-                    
-                if incident.status != IncidentStatus.WAITING:
-                    self.invalid_assignment_attempts += 1
-                    continue
-                    
-                if incident.id in assigned_this_minute_incidents or vehicle.id in assigned_this_minute_vehicles:
-                    self.duplicate_assignments += 1
-                    continue
-                    
-                if vehicle.status != VehicleStatus.IDLE:
-                    self.assignments_to_busy_vehicles += 1
-                    continue
-                    
-                # Valid assignment
-                assigned_this_minute_incidents.add(incident.id)
-                assigned_this_minute_vehicles.add(vehicle.id)
-                
-                idle_counts_before = self._get_idle_counts()
-                quadrant_before = vehicle.get_quadrant()
-                vehicle_x_before = vehicle.x
-                vehicle_y_before = vehicle.y
-                
-                dist = math.sqrt((vehicle.x - incident.x)**2 + (vehicle.y - incident.y)**2)
-                travel_time = dist # Speed is 1 unit/min
-                
-                vehicle.status = VehicleStatus.BUSY
-                vehicle.current_incident_id = incident.id
-                vehicle.x = incident.x
-                vehicle.y = incident.y
-                
-                arrival_time = self.t + travel_time
-                completion_time = arrival_time + 8
-                vehicle.completion_time = completion_time
-                
-                incident.status = IncidentStatus.ASSIGNED
-                incident.assigned_vehicle_id = vehicle.id
-                incident.dispatch_time = self.t
-                incident.response_time = (self.t - incident.arrival_minute) + travel_time
-                incident.completion_time = completion_time
-                
-                # We need to temporarily evaluate idle counts after this single assignment
-                idle_counts_after = self._get_idle_counts()
-                
-                assignment_record = Assignment(
-                    assignment_id=f"A{len(self.past_assignments)+1:04d}",
-                    incident_id=incident.id,
-                    vehicle_id=vehicle.id,
-                    priority=incident.priority,
-                    dispatch_time=self.t,
-                    vehicle_x_before=vehicle_x_before,
-                    vehicle_y_before=vehicle_y_before,
-                    incident_x=incident.x,
-                    incident_y=incident.y,
-                    distance=dist,
-                    response_time=incident.response_time,
-                    arrival_time=arrival_time,
-                    completion_time=completion_time,
-                    vehicle_quadrant_before=quadrant_before,
-                    idle_counts_before=idle_counts_before,
-                    idle_counts_after=idle_counts_after
-                )
-                self.past_assignments.append(assignment_record)
-                
-            # E. Calculate coverage immediately after assignments
-            cov_record = self._evaluate_coverage()
-            self.coverage_records.append(cov_record)
-            
-            self.t += 1
+        # E. Calculate coverage immediately after assignments
+        cov_record = self._evaluate_coverage()
+        self.coverage_records.append(cov_record)
+        
+        self.t += 1

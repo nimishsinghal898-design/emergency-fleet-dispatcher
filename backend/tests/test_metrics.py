@@ -1,20 +1,20 @@
-import pytest
 import sys
 from pathlib import Path
 
 # Add backend directory to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from app.models import Assignment, CoverageRecord, Quadrant, VehicleStatus, IncidentStatus, Incident
+
 from app.metrics import calculate_metrics, validate_assignments
-from typing import List
+from app.models import Assignment, CoverageRecord, Incident, IncidentStatus, Quadrant
+
 
 class MockSimulationEngine:
     def __init__(self):
-        self.past_assignments: List[Assignment] = []
-        self.coverage_records: List[CoverageRecord] = []
-        self.all_incidents: List[Incident] = []
-        self.revealed_incidents: List[Incident] = []
+        self.past_assignments: list[Assignment] = []
+        self.coverage_records: list[CoverageRecord] = []
+        self.all_incidents: list[Incident] = []
+        self.revealed_incidents: list[Incident] = []
         self.invalid_assignment_attempts = 0
         self.duplicate_assignments = 0
         self.assignments_to_busy_vehicles = 0

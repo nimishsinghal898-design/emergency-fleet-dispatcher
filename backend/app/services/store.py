@@ -1,7 +1,8 @@
 import threading
 from collections import OrderedDict
-from typing import Optional
+
 from app.models import RunResult
+
 
 class ResultStore:
     def __init__(self, max_size: int = 200):
@@ -17,7 +18,7 @@ class ResultStore:
             if len(self._store) > self._max_size:
                 self._store.popitem(last=False)  # Evict oldest entry (FIFO/LRU)
 
-    def get(self, run_id: str) -> Optional[RunResult]:
+    def get(self, run_id: str) -> RunResult | None:
         with self._lock:
             result = self._store.get(run_id)
             if result is not None:

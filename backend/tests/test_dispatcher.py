@@ -1,4 +1,3 @@
-import pytest
 import sys
 from pathlib import Path
 
@@ -6,8 +5,15 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from app.dispatcher import CoverageAwareDispatcher
+from app.models import (
+    Incident,
+    IncidentStatus,
+    SimulationState,
+    Vehicle,
+    VehicleStatus,
+)
 from app.simulation import SimulationEngine
-from app.models import SimulationState, Vehicle, Incident, Quadrant, VehicleStatus, IncidentStatus
+
 
 def test_causality_boundary():
     """

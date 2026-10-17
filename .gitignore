@@ -1,23 +1,82 @@
-# Python
+# ==========================================
+# Emergency Fleet Command System .gitignore
+# ==========================================
+
+# Python Bytecode & Compilation Caches
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Python Virtual Environments
 .venv/
 venv/
-__pycache__/
-*.pyc
+env/
+ENV/
+env.bak/
+venv.bak/
 
-# Node
+# Python Testing & Linting Artifacts
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.tox/
+
+# Node.js & NPM Dependencies
 node_modules/
+**/node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Local Node.js installation
+# Local Portable Node.js Installation
 node-v*/
 
-# Environment / secrets
+# Frontend Production & Intermediate Builds
+dist/
+**/dist/
+dist-ssr/
+**/dist-ssr/
+build/
+.turbo/
+
+# Environment Variables & Secrets
 .env
 .env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 !.env.example
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
 
-# Build files
-dist/
-build/
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE & Editor Configurations
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project

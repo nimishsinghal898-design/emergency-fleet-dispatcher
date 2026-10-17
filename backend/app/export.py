@@ -1,7 +1,9 @@
-import json
 import csv
+import json
 from pathlib import Path
+
 from app.models import RunResult
+
 
 def export_run_result(result: RunResult, out_dir: str = "."):
     """

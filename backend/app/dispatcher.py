@@ -1,7 +1,8 @@
 import math
-from typing import List, Tuple
+
+from app.models import Quadrant, SimulationState, VehicleStatus
 from app.simulation import DispatcherInterface
-from app.models import SimulationState, VehicleStatus, Quadrant
+
 
 class DispatcherConfig:
     def __init__(self, response_weight: float = 1.0, coverage_weight: float = 100.0, scarcity_weight: float = 20.0):
@@ -17,7 +18,7 @@ class CoverageAwareDispatcher(DispatcherInterface):
     def __init__(self, config: DispatcherConfig = None):
         self.config = config or DispatcherConfig()
         
-    def assign(self, state: SimulationState) -> List[Tuple[str, str]]:
+    def assign(self, state: SimulationState) -> list[tuple[str, str]]:
         assignments = []
         assigned_vehicles = set()
         
@@ -73,17 +74,12 @@ class CoverageAwareDispatcher(DispatcherInterface):
                 is_better = False
                 epsilon = 1e-6
                 
-                if best_vehicle is None:
+                if (
+                    best_vehicle is None
+                    or score > best_score + epsilon
+                    or (abs(score - best_score) <= epsilon and (dist < best_dist - epsilon or (abs(dist - best_dist) <= epsilon and v.id < best_vehicle.id)))
+                ):
                     is_better = True
-                else:
-                    if score > best_score + epsilon:
-                        is_better = True
-                    elif abs(score - best_score) <= epsilon:
-                        if dist < best_dist - epsilon:
-                            is_better = True
-                        elif abs(dist - best_dist) <= epsilon:
-                            if v.id < best_vehicle.id:
-                                is_better = True
                                 
                 if is_better:
                     best_score = score

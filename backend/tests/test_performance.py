@@ -1,9 +1,9 @@
-import pytest
 import time
-from fastapi.testclient import TestClient
-from app.simulation import SimulationEngine
+
 from app.dispatcher import CoverageAwareDispatcher
 from app.main import app
+from app.simulation import SimulationEngine
+from fastapi.testclient import TestClient
 
 client = TestClient(app)
 

@@ -1,15 +1,16 @@
 import time
-from typing import List
-from app.simulation import SimulationEngine
+
 from app.models import (
-    Metrics, 
-    ScenarioSummary, 
-    ValidationResults, 
-    RunResult,
-    Vehicle,
     Incident,
-    IncidentStatus
+    IncidentStatus,
+    Metrics,
+    RunResult,
+    ScenarioSummary,
+    ValidationResults,
+    Vehicle,
 )
+from app.simulation import SimulationEngine
+
 
 def calculate_metrics(engine: SimulationEngine) -> Metrics:
     """

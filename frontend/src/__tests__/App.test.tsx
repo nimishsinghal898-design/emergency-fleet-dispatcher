@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, act } from '@testing-library/react';
 import App from '../App';
 import { expect, test, vi } from 'vitest';
 
@@ -6,18 +6,19 @@ import { expect, test, vi } from 'vitest';
 vi.mock('../api/client', () => {
     return {
         api: {
+            checkHealth: vi.fn().mockResolvedValue({ status: 'ok' }),
             runSimulation: vi.fn().mockReturnValue(new Promise(() => {})),
             getRun: vi.fn().mockResolvedValue({
                 run_id: 'mock-123',
                 metrics: {
-                    weighted_response_time: 100.5,
+                    weighted_response_mean: 100.5,
                     p3_mean_response: 25.0,
-                    outage_minutes: 10,
+                    total_outage_minutes: 10,
                     assigned_count: 50,
                     invalid_assignments: 0,
                     runtime_seconds: 0.1
                 },
-                validation_results: { is_valid: true, errors: [] },
+                validation_results: { assigned_incidents: 50, total_incidents: 100, waiting_incidents: 0, invalid_assignment_attempts: 0, duplicate_assignments: 0, assignments_to_busy_vehicles: 0, assignments_before_reveal: 0 },
                 assignments: [],
                 incidents: [],
                 vehicles: [],
@@ -27,20 +28,27 @@ vi.mock('../api/client', () => {
     };
 });
 
-test('renders App and shows loading state when submitting form', () => {
-    render(<App />);
+test('renders App and shows loading state when submitting form', async () => {
+    await act(async () => {
+        render(<App />);
+    });
+    
     const runBtn = screen.getByText(/EXECUTE SIMULATION/i);
     expect(runBtn).toBeInTheDocument();
     
     // Fire submit on form
-    fireEvent.submit(runBtn.closest('form')!);
+    await act(async () => {
+        fireEvent.submit(runBtn.closest('form')!);
+    });
     
     // Expect loading text/state
-    expect(screen.getByText(/EXECUTING SIMULATION/i)).toBeInTheDocument();
+    expect(screen.getByText(/EXECUTING ENGINE/i)).toBeInTheDocument();
 });
 
-test('IncidentQueue shows NO INCIDENTS WAITING when empty', () => {
-    render(<App />);
-    // Initially no queue since no run has completed in this render without mocking the await correctly,
-    // wait, we can just test the IncidentQueue component directly.
+test('renders header and operations center branding', async () => {
+    await act(async () => {
+        render(<App />);
+    });
+    expect(screen.getByText(/EMERGENCY FLEET COMMAND/i)).toBeInTheDocument();
+    expect(screen.getByText(/Causal Fleet Assignment/i)).toBeInTheDocument();
 });

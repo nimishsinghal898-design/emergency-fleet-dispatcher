@@ -6,9 +6,10 @@ from statistics import mean
 
 sys.path.insert(0, str(Path(__file__).parent))
 
-from app.simulation import SimulationEngine, BaselineDispatcher
 from app.dispatcher import CoverageAwareDispatcher
 from app.metrics import build_run_result
+from app.simulation import BaselineDispatcher, SimulationEngine
+
 
 def print_comparison_table(results):
     print("\n" + "="*80)

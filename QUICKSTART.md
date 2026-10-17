@@ -1,49 +1,94 @@
-# Quickstart
+# Quickstart Guide: Emergency Fleet Command System
 
-The Emergency Fleet Command system has been packaged into a single unified Docker container for effortless evaluation.
-
-## Prerequisites
-- Git
-- Docker & Docker Compose
-
-## 1-Command Execution
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/emergency-fleet.git
-cd emergency-fleet
-
-# Build and run using Docker Compose (or direct docker run)
-docker build -t emergency-fleet .
-docker run -p 8000:8000 emergency-fleet
-```
-
-## Accessing the Dashboard
-Open your browser and navigate to:
-**http://localhost:8000**
-
-*(The FastAPI backend automatically serves the pre-compiled React static assets on the root path, providing a seamless single-port experience.)*
+Get the entire application stack running in under 2 minutes.
 
 ---
 
-## Local Development (Without Docker)
+## Method 1: Docker Compose (Recommended)
 
-If you wish to run the frontend and backend in separate development servers with hot-reloading:
+Run the backend API, simulation engine, and compiled operations dashboard with a single command:
 
-### 1. Backend
 ```bash
-cd backend
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .\.venv\Scripts\activate
-pip install -r requirements.txt
-python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+# 1. Clone the repository
+git clone https://github.com/nimishsinghal898-design/emergency-fleet-assistant.git
+cd emergency-fleet-assistant
+
+# 2. Build and launch
+docker compose up --build
 ```
 
-### 2. Frontend
-Open a new terminal.
+Open your browser to:
+### **👉 [http://localhost:8000](http://localhost:8000)**
+
+---
+
+## Method 2: Standalone Docker Container
+
+If you prefer building and running a single self-contained production image:
+
+```bash
+# Build multi-stage image
+docker build -t emergency-fleet .
+
+# Run on port 8000
+docker run -p 8000:8000 emergency-fleet
+```
+
+Access the dashboard at:
+### **👉 [http://localhost:8000](http://localhost:8000)**
+
+---
+
+## Method 3: Native Local Setup (Without Docker)
+
+### 1. Backend (Terminal 1)
+```bash
+# Create and activate Python 3.13+ virtual environment
+python -m venv .venv
+
+# On Linux/macOS:
+source .venv/bin/activate
+# On Windows:
+.\.venv\Scripts\activate
+
+# Install dependencies & start server
+pip install -r backend/requirements.txt
+python -m uvicorn app.main:app --app-dir backend --host 127.0.0.1 --port 8000 --reload
+```
+
+### 2. Frontend (Terminal 2)
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-Navigate to **http://localhost:5173**.
+Open **[http://localhost:5173](http://localhost:5173)** in your browser.
+
+---
+
+## Running the Benchmark & Generating Exports
+
+To execute the official challenge benchmark (Seed `20260911`) and generate the 4 required output files:
+
+```bash
+# Ensure the backend server is running on port 8000, then run:
+python export_script.py
+```
+
+This immediately creates:
+- `results.json` — Complete scenario telemetry and calculated metrics
+- `results.csv` — Official challenge metric summary row
+- `assignments.csv` — Complete tabular dispatch log
+- `coverage.csv` — 120-minute quadrant vehicle tallies and outage telemetry
+
+---
+
+## Running the Test Suites
+
+```bash
+# Backend pytest suite (51 tests)
+pytest backend -v
+
+# Frontend Vitest suite (4 tests)
+cd frontend && npm test -- --run
+```

@@ -1,9 +1,10 @@
-import pytest
 import math
-from app.simulation import SimulationEngine, BaselineDispatcher
-from app.models import VehicleStatus, IncidentStatus, Vehicle, Incident, Quadrant
+
 from app.dispatcher import CoverageAwareDispatcher
 from app.metrics import build_run_result
+from app.models import Incident, Quadrant, Vehicle, VehicleStatus
+from app.simulation import SimulationEngine
+
 
 def create_mock_engine(vehicles=None, incidents=None, dispatcher=None):
     disp = dispatcher or CoverageAwareDispatcher()
